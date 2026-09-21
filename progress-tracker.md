@@ -32,25 +32,26 @@ This live document tracks development progress, milestones, phase tasks, and del
 ## 3. Phase Breakdown & Task Checklist
 
 ### Phase 0: Project Architecture & Documentation
-- [x] Inspect Figma mockups and extract visual design requirements
-- [x] Generate `project-overview.md`
-- [x] Generate `ui-tokens.md`
-- [x] Generate `ui-rules.md`
-- [x] Generate `ui-registry.md`
-- [x] Generate `architecture.md`
-- [x] Generate `code-standards.md`
-- [x] Generate `build-plan.md`
-- [x] Generate `progress-tracker.md`
+- [x] `[commit: adbfd69]` Inspect Figma mockups and extract visual design requirements
+- [x] `[commit: adbfd69]` Generate `project-overview.md`
+- [x] `[commit: adbfd69]` Generate `ui-tokens.md`
+- [x] `[commit: adbfd69]` Generate `ui-rules.md`
+- [x] `[commit: adbfd69]` Generate `ui-registry.md`
+- [x] `[commit: adbfd69]` Generate `architecture.md`
+- [x] `[commit: adbfd69]` Generate `code-standards.md`
+- [x] `[commit: adbfd69]` Generate `build-plan.md`
+- [x] `[commit: adbfd69]` Generate `progress-tracker.md`
+- [x] `[commit: adbfd69]` Generate consolidated `context.md`
 
 ---
 
 ### Phase 1: Foundation, Asset Pipeline & Design Tokens
-- [x] Create asset folder structure (`public/images/{hero,rooms,experiences,dining,icons}`)
-- [x] Crop and migrate source photography from `context/`
-- [x] Set up Google Fonts (`Cormorant Garamond` & `Inter`) in `app/layout.tsx`
-- [x] Configure Tailwind CSS v4 `@theme` tokens in `app/globals.css`
-- [x] Create `lib/utils.ts` (`cn()` helper with clsx and tailwind-merge)
-- [x] Verify clean Next.js build compilation (`npm run build`)
+- [x] `[commit: b60ce03]` Create asset folder structure (`public/images/{hero,rooms,experiences,dining,icons}`)
+- [x] `[commit: b60ce03]` Crop and migrate source photography from `context/`
+- [x] `[commit: b60ce03]` Set up Google Fonts (`Cormorant Garamond` & `Inter`) in `app/layout.tsx`
+- [x] `[commit: b60ce03]` Configure Tailwind CSS v4 `@theme` tokens in `app/globals.css`
+- [x] `[commit: b60ce03]` Create `lib/utils.ts` (`cn()` helper with clsx and tailwind-merge)
+- [x] `[commit: b60ce03]` Verify clean Next.js build compilation (`npm run build`)
 
 ---
 
@@ -134,8 +135,8 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 ## 4. Revision History & Audit Trail
 
-| Date | Phase / Milestone | Description of Changes | Author |
-| :--- | :--- | :--- | :--- |
-| **2026-09-20** | **Phase 0** | Analyzed design mockups from `context/`. Generated complete specification suite: `project-overview.md`, `ui-tokens.md`, `ui-rules.md`, `ui-registry.md`, `architecture.md`, `code-standards.md`, `build-plan.md`, `progress-tracker.md`. | Antigravity AI |
-| **2026-09-21** | **Consolidated Context** | Created master consolidated reference `context.md` in `itagi-square` containing full context, architecture, tokens, rules, registry, and roadmap. | Antigravity AI |
-| **2026-09-21** | **Phase 1** | **Completed Phase 1**: Extracted & optimized high-res imagery into `public/images/` (hero, rooms, dining, experiences, botanical icon); installed `clsx`, `tailwind-merge`, `lucide-react`; created `lib/utils.ts` (`cn()` helper); configured `Cormorant Garamond` & `Inter` in `app/layout.tsx`; configured Tailwind CSS v4 `@theme` tokens in `app/globals.css`; verified clean production build with Turbopack (0 errors). | Antigravity AI |
+| Date | Phase / Milestone | Commit | Description of Changes | Author |
+| :--- | :--- | :--- | :--- | :--- |
+| **2026-09-20** | **Phase 0: Specifications** | `adbfd69` | Analyzed design mockups from `context/`. Generated complete specification suite: `project-overview.md`, `ui-tokens.md`, `ui-rules.md`, `ui-registry.md`, `architecture.md`, `code-standards.md`, `build-plan.md`, `progress-tracker.md`. | Antigravity AI |
+| **2026-09-21** | **Consolidated Context** | `adbfd69` | Created master consolidated reference `context.md` in `itagi-square` containing full context, architecture, tokens, rules, registry, and roadmap. | Antigravity AI |
+| **2026-09-21** | **Phase 1: Foundation** | `b60ce03` | **Completed Phase 1**: Extracted & optimized high-res imagery into `public/images/` (hero, rooms, dining, experiences, botanical icon); installed `clsx`, `tailwind-merge`, `lucide-react`; created `lib/utils.ts` (`cn()` helper); configured `Cormorant Garamond` & `Inter` in `app/layout.tsx`; configured Tailwind CSS v4 `@theme` tokens in `app/globals.css`; verified clean production build with Turbopack (0 errors). | Antigravity AI |
