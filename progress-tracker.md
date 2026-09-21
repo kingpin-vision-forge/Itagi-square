@@ -8,10 +8,10 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 | Metric | Status |
 | :--- | :--- |
-| **Current Phase** | **Phase 2: Design System Primitives & Atomic Components** |
-| **Overall Progress** | `30%` |
+| **Current Phase** | **Phase 3: Static Data Layer & TypeScript Contracts** |
+| **Overall Progress** | `45%` |
 | **Design Specifications** | `100% Completed` (All 8 Core Docs Generated) |
-| **Next Target** | Phase 2 Execution (Button primitives, Underlined Inputs, Spec Badges, Botanical Divider) |
+| **Next Target** | Phase 3 Execution (TypeScript contracts & data models for rooms, dining, experiences, policies, amenities) |
 | **Last Updated** | September 21, 2026 |
 
 ---
@@ -20,12 +20,13 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 - [x] **Milestone 0: Specification & Architecture** (Docs Generated)
 - [x] **Milestone 1: Design System Foundation** (Tokens, Typography, Assets, Utils)
-- [ ] **Milestone 2: Design System Primitives & Components** (Buttons, Badges, Inputs, Cards)
-- [ ] **Milestone 3: Above the Fold Experience** (Navbar, Hero Section)
-- [ ] **Milestone 4: Core Features & Galleries** (Rooms Carousel, Experience Pillars, Dining Arc)
-- [ ] **Milestone 5: Guest Information & Booking** (Before You Arrive, Amenities, Postcard Form)
-- [ ] **Milestone 6: Footer & Brand Presence** (Royal Purple Footer, Newsletter)
-- [ ] **Milestone 7: QA, Responsiveness & Launch Readiness** (Build, Typecheck, A11y, Vercel Deploy)
+- [x] **Milestone 2: Design System Primitives & Components** (Buttons, Badges, Inputs, Divider)
+- [ ] **Milestone 3: Data Contracts & Models** (Rooms, Experiences, Dining, Policies, Amenities)
+- [ ] **Milestone 4: Above the Fold Experience** (Navbar, Hero Section)
+- [ ] **Milestone 5: Core Features & Galleries** (Rooms Carousel, Experience Pillars, Dining Arc)
+- [ ] **Milestone 6: Guest Information & Booking** (Before You Arrive, Amenities, Postcard Form)
+- [ ] **Milestone 7: Footer & Brand Presence** (Royal Purple Footer, Newsletter)
+- [ ] **Milestone 8: QA, Responsiveness & Launch Readiness** (Build, Typecheck, A11y, Vercel Deploy)
 
 ---
 
@@ -56,10 +57,10 @@ This live document tracks development progress, milestones, phase tasks, and del
 ---
 
 ### Phase 2: Design System Primitives & Atomic Components
-- [ ] Create `components/ui/button.tsx` (Hero pill, Purple pill, Vintage ticket, Icon circle)
-- [ ] Create `components/ui/underline-input.tsx` (Minimalist underlined inputs)
-- [ ] Create `components/ui/room-spec-badge.tsx` (Grid, Bed, Guest capacity icons)
-- [ ] Create `components/ui/vintage-divider.tsx` (Botanical rosehip engraving SVG)
+- [x] `[commit: 25a57a5]` Create `components/ui/button.tsx` (Hero pill, Purple pill, Vintage ticket, Icon circle)
+- [x] `[commit: 25a57a5]` Create `components/ui/underline-input.tsx` (Minimalist underlined inputs)
+- [x] `[commit: 25a57a5]` Create `components/ui/room-spec-badge.tsx` (Grid, Bed, Guest capacity icons)
+- [x] `[commit: 25a57a5]` Create `components/ui/vintage-divider.tsx` (Botanical rosehip engraving SVG)
 
 ---
 
@@ -140,3 +141,4 @@ This live document tracks development progress, milestones, phase tasks, and del
 | **2026-09-20** | **Phase 0: Specifications** | `adbfd69` | Analyzed design mockups from `context/`. Generated complete specification suite: `project-overview.md`, `ui-tokens.md`, `ui-rules.md`, `ui-registry.md`, `architecture.md`, `code-standards.md`, `build-plan.md`, `progress-tracker.md`. | Antigravity AI |
 | **2026-09-21** | **Consolidated Context** | `adbfd69` | Created master consolidated reference `context.md` in `itagi-square` containing full context, architecture, tokens, rules, registry, and roadmap. | Antigravity AI |
 | **2026-09-21** | **Phase 1: Foundation** | `b60ce03` | **Completed Phase 1**: Extracted & optimized high-res imagery into `public/images/` (hero, rooms, dining, experiences, botanical icon); installed `clsx`, `tailwind-merge`, `lucide-react`; created `lib/utils.ts` (`cn()` helper); configured `Cormorant Garamond` & `Inter` in `app/layout.tsx`; configured Tailwind CSS v4 `@theme` tokens in `app/globals.css`; verified clean production build with Turbopack (0 errors). | Antigravity AI |
+| **2026-09-21** | **Phase 2: Primitives** | `25a57a5` | **Completed Phase 2**: Implemented atomic primitives in `components/ui/`: `Button` (with hero-pill, purple-pill, vintage-ticket, icon-circle variants), `UnderlineInput` (minimalist underlined form inputs with floating labels), `RoomSpecBadge` (area, bed, guests indicators with Lucide icons), and `VintageDivider` (botanical rosehip engraving SVG with hairline dividers); verified clean build (0 errors). | Antigravity AI |
