@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-purple-950: #1A0322;
+  --color-purple-900: #2B0736;
+  --color-purple-800: #3A0D47;
+  --color-purple-700: #481454;
+  --color-purple-600: #5B1C69;
+  --color-purple-500: #742985;
+  --color-purple-400: #933B9B;
+  --color-purple-300: #B986C8;
+  --color-purple-200: #D8B7E2;
+  --color-purple-100: #EEDBEE;
+
+  --color-sand-50: #FAF8F5;
+  --color-sand-100: #F4F0E8;
+  --color-sand-200: #E8E2D5;
+  --color-sand-300: #DDD3C3;
+  --color-sand-400: #CFC2AE;
+  --color-sand-500: #8F7E71;
+
+  --color-sky-blue: #ADCDEE;
+  --color-sky-blue-hover: #96BFEC;
+
+  --color-ticket-peach: #F7E5D4;
+  --color-ticket-hover: #F2DAC4;
+
+  --color-gold-accent: #C79D58;
+
+  --font-serif: var(--font-serif), Cormorant Garamond, Playfair Display, Georgia, serif;
+  --font-sans: var(--font-sans), Inter, system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--color-sand-400);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Utilities for Luxury Hotel Detailing */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ticket-scallop {
+  position: relative;
+  background-color: #F7E5D4;
+  border: 1px solid #481454;
+  box-shadow: 0 4px 12px rgba(72, 20, 84, 0.15);
+  border-radius: 9999px;
+}
+
+/* Custom Curvilinear Arc Ribbon Mask */
+.curved-ribbon-container {
+  border-radius: 40px;
+  overflow: hidden;
 }
