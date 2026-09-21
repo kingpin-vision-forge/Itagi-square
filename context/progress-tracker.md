@@ -8,10 +8,10 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 | Metric | Status |
 | :--- | :--- |
-| **Current Phase** | **Phase 3: Static Data Layer & TypeScript Contracts** |
-| **Overall Progress** | `45%` |
+| **Current Phase** | **Phase 4: Hero Section & Frosted Navigation** |
+| **Overall Progress** | `55%` |
 | **Design Specifications** | `100% Completed` (All 8 Core Docs Generated) |
-| **Next Target** | Phase 3 Execution (TypeScript contracts & data models for rooms, dining, experiences, policies, amenities) |
+| **Next Target** | Phase 4 Execution (Frosted glass Navbar with mobile drawer, full-bleed Hero section with headline) |
 | **Last Updated** | September 21, 2026 |
 
 ---
@@ -21,7 +21,7 @@ This live document tracks development progress, milestones, phase tasks, and del
 - [x] **Milestone 0: Specification & Architecture** (Docs Generated)
 - [x] **Milestone 1: Design System Foundation** (Tokens, Typography, Assets, Utils)
 - [x] **Milestone 2: Design System Primitives & Components** (Buttons, Badges, Inputs, Divider)
-- [ ] **Milestone 3: Data Contracts & Models** (Rooms, Experiences, Dining, Policies, Amenities)
+- [x] **Milestone 3: Data Contracts & Models** (Rooms, Experiences, Dining, Policies, Amenities)
 - [ ] **Milestone 4: Above the Fold Experience** (Navbar, Hero Section)
 - [ ] **Milestone 5: Core Features & Galleries** (Rooms Carousel, Experience Pillars, Dining Arc)
 - [ ] **Milestone 6: Guest Information & Booking** (Before You Arrive, Amenities, Postcard Form)
@@ -65,12 +65,12 @@ This live document tracks development progress, milestones, phase tasks, and del
 ---
 
 ### Phase 3: Static Data Layer & TypeScript Contracts
-- [ ] Create types in `types/` (`room.ts`, `experience.ts`, `culinary.ts`, `guide.ts`, `contact.ts`)
-- [ ] Populate `data/rooms.ts` with Suite Room, Executive Suite, and Executive Room
-- [ ] Populate `data/experiences.ts` with UNWIND, DINE, EXPLORE, CONNECT
-- [ ] Populate `data/culinary.ts` with Indo-Arabic specialties
-- [ ] Populate `data/policies.ts` with check-in rules and proximity landmarks
-- [ ] Populate `data/amenities.ts` with 4-category hotel amenities
+- [x] `[commit: 5932f66]` Create types in `types/` (`room.ts`, `experience.ts`, `culinary.ts`, `guide.ts`, `contact.ts`)
+- [x] `[commit: 5932f66]` Populate `data/rooms.ts` with Suite Room, Executive Suite, and Executive Room
+- [x] `[commit: 5932f66]` Populate `data/experiences.ts` with UNWIND, DINE, EXPLORE, CONNECT
+- [x] `[commit: 5932f66]` Populate `data/culinary.ts` with Indo-Arabic specialties
+- [x] `[commit: 5932f66]` Populate `data/policies.ts` with check-in rules and proximity landmarks
+- [x] `[commit: 5932f66]` Populate `data/amenities.ts` with 4-category hotel amenities
 
 ---
 
@@ -142,3 +142,4 @@ This live document tracks development progress, milestones, phase tasks, and del
 | **2026-09-21** | **Consolidated Context** | `adbfd69` | Created master consolidated reference `context.md` in `itagi-square` containing full context, architecture, tokens, rules, registry, and roadmap. | Antigravity AI |
 | **2026-09-21** | **Phase 1: Foundation** | `b60ce03` | **Completed Phase 1**: Extracted & optimized high-res imagery into `public/images/` (hero, rooms, dining, experiences, botanical icon); installed `clsx`, `tailwind-merge`, `lucide-react`; created `lib/utils.ts` (`cn()` helper); configured `Cormorant Garamond` & `Inter` in `app/layout.tsx`; configured Tailwind CSS v4 `@theme` tokens in `app/globals.css`; verified clean production build with Turbopack (0 errors). | Antigravity AI |
 | **2026-09-21** | **Phase 2: Primitives** | `25a57a5` | **Completed Phase 2**: Implemented atomic primitives in `components/ui/`: `Button` (with hero-pill, purple-pill, vintage-ticket, icon-circle variants), `UnderlineInput` (minimalist underlined form inputs with floating labels), `RoomSpecBadge` (area, bed, guests indicators with Lucide icons), and `VintageDivider` (botanical rosehip engraving SVG with hairline dividers); verified clean build (0 errors). | Antigravity AI |
+| **2026-09-21** | **Phase 3: Data Contracts** | `5932f66` | **Completed Phase 3 (Milestone 3)**: Created TypeScript interfaces in `types/` (`room.ts`, `experience.ts`, `culinary.ts`, `guide.ts`, `contact.ts`) and populated type-safe static datasets in `data/`: `rooms.ts` (Suite Room, Executive Suite, Executive Room with specs), `experiences.ts` (UNWIND, DINE, EXPLORE, CONNECT), `culinary.ts` (Indo-Arabic dishes & ribbon arc data), `policies.ts` (check-in/out, proximity landmarks, essentials), and `amenities.ts` (4-category hotel amenities); verified clean build (0 errors). | Antigravity AI |
