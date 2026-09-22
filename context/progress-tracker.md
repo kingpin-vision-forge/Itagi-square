@@ -8,10 +8,10 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 | Metric | Status |
 | :--- | :--- |
-| **Current Phase** | **Phase 8: Guest Guide & Amenities Editorial Grid** |
-| **Overall Progress** | `82%` |
+| **Current Phase** | **Phase 9: Vintage Postcard Contact & Reservation Form** |
+| **Overall Progress** | `88%` |
 | **Design Specifications** | `100% Completed` (All 8 Core Docs Generated) |
-| **Next Target** | Phase 8 Execution (4-column editorial tables for 'BEFORE YOU ARRIVE.' & 'AMENITIES' from Frame 72.png) |
+| **Next Target** | Phase 9 Execution (Vintage Postcard Contact Form from Frame 41.png) |
 | **Last Updated** | September 22, 2026 |
 
 ---
@@ -103,9 +103,9 @@ This live document tracks development progress, milestones, phase tasks, and del
 ---
 
 ### Phase 8: Guest Guide & Amenities Editorial Grid
-- [ ] Build `components/molecules/policy-column.tsx`
-- [ ] Build `components/molecules/amenity-column.tsx`
-- [ ] Build `components/sections/guest-guide-section.tsx` ("BEFORE YOU ARRIVE." & "AMENITIES")
+- [x] `[commit: 925c157]` Build `components/molecules/policy-column.tsx`
+- [x] `[commit: 925c157]` Build `components/molecules/amenity-column.tsx`
+- [x] `[commit: 925c157]` Build `components/sections/guest-guide-section.tsx` ("BEFORE YOU ARRIVE." & "AMENITIES")
 
 ---
 
