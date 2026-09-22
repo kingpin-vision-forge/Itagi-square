@@ -5,6 +5,7 @@ import { RoomsSuitesSection } from '@/components/sections/rooms-suites-section';
 import { MoreThanAStaySection } from '@/components/sections/more-than-a-stay-section';
 import { CulinaryShowcaseSection } from '@/components/sections/culinary-showcase-section';
 import { GuestGuideSection } from '@/components/sections/guest-guide-section';
+import { ContactPostcardSection } from '@/components/sections/contact-postcard-section';
 import { Button } from '@/components/ui/button';
 import { UnderlineInput } from '@/components/ui/underline-input';
 import { RoomSpecBadge } from '@/components/ui/room-spec-badge';
@@ -30,6 +31,9 @@ export default function Home() {
 
       {/* Guest Information & Amenities Guide (Figma Frame 72.png) */}
       <GuestGuideSection />
+
+      {/* Vintage Postcard Contact & Reservation Form (Figma Frame 41.png) */}
+      <ContactPostcardSection />
 
       {/* Component & Design Primitives Showcase */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
