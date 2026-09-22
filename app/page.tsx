@@ -4,6 +4,7 @@ import { HeroSection } from '@/components/sections/hero-section';
 import { RoomsSuitesSection } from '@/components/sections/rooms-suites-section';
 import { MoreThanAStaySection } from '@/components/sections/more-than-a-stay-section';
 import { CulinaryShowcaseSection } from '@/components/sections/culinary-showcase-section';
+import { GuestGuideSection } from '@/components/sections/guest-guide-section';
 import { Button } from '@/components/ui/button';
 import { UnderlineInput } from '@/components/ui/underline-input';
 import { RoomSpecBadge } from '@/components/ui/room-spec-badge';
@@ -26,6 +27,9 @@ export default function Home() {
 
       {/* Culinary Showcase Arc Ribbon (Figma Frame 39.png) */}
       <CulinaryShowcaseSection />
+
+      {/* Guest Information & Amenities Guide (Figma Frame 72.png) */}
+      <GuestGuideSection />
 
       {/* Component & Design Primitives Showcase */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
