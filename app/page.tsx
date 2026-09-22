@@ -3,6 +3,7 @@ import { Navbar } from '@/components/sections/navbar';
 import { HeroSection } from '@/components/sections/hero-section';
 import { RoomsSuitesSection } from '@/components/sections/rooms-suites-section';
 import { MoreThanAStaySection } from '@/components/sections/more-than-a-stay-section';
+import { CulinaryShowcaseSection } from '@/components/sections/culinary-showcase-section';
 import { Button } from '@/components/ui/button';
 import { UnderlineInput } from '@/components/ui/underline-input';
 import { RoomSpecBadge } from '@/components/ui/room-spec-badge';
@@ -23,17 +24,20 @@ export default function Home() {
       {/* "More Than A Stay" 4-Pillar Grid (Figma Frame 36.png) */}
       <MoreThanAStaySection />
 
+      {/* Culinary Showcase Arc Ribbon (Figma Frame 39.png) */}
+      <CulinaryShowcaseSection />
+
       {/* Component & Design Primitives Showcase */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xs uppercase tracking-[0.25em] text-[#481454] font-semibold">
-            Phase 6 Complete
+            Milestone 5 Complete
           </span>
           <h2 className="text-3xl md:text-5xl font-serif mt-3 tracking-wide text-[#1D161F]">
-            More Than A Stay Lifestyle Pillars
+            Core Features & Galleries Active
           </h2>
           <p className="mt-4 text-sm text-[#5C5260] font-sans">
-            UNWIND, DINE, EXPLORE, and CONNECT cards with smooth hover zoom and navigation controls.
+            Rooms Carousel, 4 Lifestyle Pillars, and the Curvilinear Arc Dining Gallery are live.
           </p>
         </div>
 
