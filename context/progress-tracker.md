@@ -8,10 +8,10 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 | Metric | Status |
 | :--- | :--- |
-| **Current Phase** | **Phase 7: "Good Food. Good Moments." Curvilinear Ribbon** |
-| **Overall Progress** | `78%` |
+| **Current Phase** | **Phase 8: Guest Guide & Amenities Editorial Grid** |
+| **Overall Progress** | `82%` |
 | **Design Specifications** | `100% Completed` (All 8 Core Docs Generated) |
-| **Next Target** | Phase 7 Execution (Curvilinear arc ribbon gallery for Indo-Arabic cuisine from Frame 39.png) |
+| **Next Target** | Phase 8 Execution (4-column editorial tables for 'BEFORE YOU ARRIVE.' & 'AMENITIES' from Frame 72.png) |
 | **Last Updated** | September 22, 2026 |
 
 ---
@@ -23,7 +23,7 @@ This live document tracks development progress, milestones, phase tasks, and del
 - [x] **Milestone 2: Design System Primitives & Components** (Buttons, Badges, Inputs, Divider)
 - [x] **Milestone 3: Data Contracts & Models** (Rooms, Experiences, Dining, Policies, Amenities)
 - [x] **Milestone 4: Above the Fold Experience** (Navbar, Hero Section)
-- [ ] **Milestone 5: Core Features & Galleries** (Rooms Carousel, Experience Pillars, Dining Arc)
+- [x] **Milestone 5: Core Features & Galleries** (Rooms Carousel, Experience Pillars, Dining Arc)
 - [ ] **Milestone 6: Guest Information & Booking** (Before You Arrive, Amenities, Postcard Form)
 - [ ] **Milestone 7: Footer & Brand Presence** (Royal Purple Footer, Newsletter)
 - [ ] **Milestone 8: QA, Responsiveness & Launch Readiness** (Build, Typecheck, A11y, Vercel Deploy)
@@ -97,8 +97,8 @@ This live document tracks development progress, milestones, phase tasks, and del
 ---
 
 ### Phase 7: "Good Food. Good Moments." Curvilinear Ribbon
-- [ ] Build `components/molecules/curved-ribbon-gallery.tsx` with architectural concave/convex curves
-- [ ] Build `components/sections/culinary-showcase-section.tsx` with centered "EXPLORE ITAGI" CTA
+- [x] `[commit: dc45bb9]` Build `components/molecules/curved-ribbon-gallery.tsx` with architectural concave/convex curves
+- [x] `[commit: dc45bb9]` Build `components/sections/culinary-showcase-section.tsx` with centered "EXPLORE ITAGI" CTA
 
 ---
 
@@ -146,3 +146,4 @@ This live document tracks development progress, milestones, phase tasks, and del
 | **2026-09-22** | **Phase 4: Above The Fold** | `4d9725e` | **Completed Phase 4 (Milestone 4)**: Built modular `Navbar` with frosted glassmorphism, scroll detection, mobile hamburger drawer, and `BOOK NOW` CTA; built full-bleed `HeroSection` with entrance facade image, ambient dark gradients, and monumental serif headline `HOTEL ITAGI SQUARE` with action CTAs; verified clean build (0 errors). | Antigravity AI |
 | **2026-09-22** | **Phase 5: Rooms & Suites** | `d67087b` | **Completed Phase 5**: Built two-tone `RoomCard` with imperial purple backing, warm sand face, area/bed/guests spec badges, and `EXPLORE ITAGI` CTA; built `RoomsSuitesSection` with circular purple `<` and `>` navigation controls, active slide state, and mobile touch swipe support; mounted in `app/page.tsx`; verified clean build (0 errors). | Antigravity AI |
 | **2026-09-22** | **Phase 6: Lifestyle Pillars** | `d3aecc1` | **Completed Phase 6**: Built `PillarCard` with 4:5 portrait ratio, dark gradient overlay, bottom title in serif italic, circular right-arrow button, and smooth hover zoom; built `MoreThanAStaySection` displaying UNWIND, DINE, EXPLORE, and CONNECT in 4-column responsive grid; mounted in `app/page.tsx`; verified clean build (0 errors). | Antigravity AI |
+| **2026-09-22** | **Phase 7: Culinary Arc Gallery** | `dc45bb9` | **Completed Phase 7 (Milestone 5)**: Built `CurvedRibbonGallery` with architectural concave/convex curved ribbon container and high-res Indo-Arabic cuisine showcase; built `CulinaryShowcaseSection` with centered `EXPLORE ITAGI` pill CTA; mounted in `app/page.tsx`; verified clean build (0 errors). | Antigravity AI |
