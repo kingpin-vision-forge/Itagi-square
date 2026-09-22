@@ -8,10 +8,10 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 | Metric | Status |
 | :--- | :--- |
-| **Current Phase** | **Phase 6: "More Than A Stay" Experience Pillars** |
-| **Overall Progress** | `72%` |
+| **Current Phase** | **Phase 7: "Good Food. Good Moments." Curvilinear Ribbon** |
+| **Overall Progress** | `78%` |
 | **Design Specifications** | `100% Completed` (All 8 Core Docs Generated) |
-| **Next Target** | Phase 6 Execution ("More Than A Stay" 4-pillar lifestyle grid from Frame 36.png) |
+| **Next Target** | Phase 7 Execution (Curvilinear arc ribbon gallery for Indo-Arabic cuisine from Frame 39.png) |
 | **Last Updated** | September 22, 2026 |
 
 ---
@@ -91,8 +91,8 @@ This live document tracks development progress, milestones, phase tasks, and del
 ---
 
 ### Phase 6: "More Than A Stay" Experience Pillars
-- [ ] Build `components/molecules/pillar-card.tsx` with hover zoom effect
-- [ ] Build `components/sections/more-than-a-stay-section.tsx` (4-column grid)
+- [x] `[commit: d3aecc1]` Build `components/molecules/pillar-card.tsx` with hover zoom effect
+- [x] `[commit: d3aecc1]` Build `components/sections/more-than-a-stay-section.tsx` (4-column grid)
 
 ---
 
@@ -145,3 +145,4 @@ This live document tracks development progress, milestones, phase tasks, and del
 | **2026-09-21** | **Phase 3: Data Contracts** | `5932f66` | **Completed Phase 3 (Milestone 3)**: Created TypeScript interfaces in `types/` (`room.ts`, `experience.ts`, `culinary.ts`, `guide.ts`, `contact.ts`) and populated type-safe static datasets in `data/`: `rooms.ts` (Suite Room, Executive Suite, Executive Room with specs), `experiences.ts` (UNWIND, DINE, EXPLORE, CONNECT), `culinary.ts` (Indo-Arabic dishes & ribbon arc data), `policies.ts` (check-in/out, proximity landmarks, essentials), and `amenities.ts` (4-category hotel amenities); verified clean build (0 errors). | Antigravity AI |
 | **2026-09-22** | **Phase 4: Above The Fold** | `4d9725e` | **Completed Phase 4 (Milestone 4)**: Built modular `Navbar` with frosted glassmorphism, scroll detection, mobile hamburger drawer, and `BOOK NOW` CTA; built full-bleed `HeroSection` with entrance facade image, ambient dark gradients, and monumental serif headline `HOTEL ITAGI SQUARE` with action CTAs; verified clean build (0 errors). | Antigravity AI |
 | **2026-09-22** | **Phase 5: Rooms & Suites** | `d67087b` | **Completed Phase 5**: Built two-tone `RoomCard` with imperial purple backing, warm sand face, area/bed/guests spec badges, and `EXPLORE ITAGI` CTA; built `RoomsSuitesSection` with circular purple `<` and `>` navigation controls, active slide state, and mobile touch swipe support; mounted in `app/page.tsx`; verified clean build (0 errors). | Antigravity AI |
+| **2026-09-22** | **Phase 6: Lifestyle Pillars** | `d3aecc1` | **Completed Phase 6**: Built `PillarCard` with 4:5 portrait ratio, dark gradient overlay, bottom title in serif italic, circular right-arrow button, and smooth hover zoom; built `MoreThanAStaySection` displaying UNWIND, DINE, EXPLORE, and CONNECT in 4-column responsive grid; mounted in `app/page.tsx`; verified clean build (0 errors). | Antigravity AI |
