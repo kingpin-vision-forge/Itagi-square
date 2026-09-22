@@ -8,11 +8,11 @@ This live document tracks development progress, milestones, phase tasks, and del
 
 | Metric | Status |
 | :--- | :--- |
-| **Current Phase** | **Phase 4: Hero Section & Frosted Navigation** |
-| **Overall Progress** | `55%` |
+| **Current Phase** | **Phase 5: Rooms & Suites Interactive Carousel** |
+| **Overall Progress** | `65%` |
 | **Design Specifications** | `100% Completed` (All 8 Core Docs Generated) |
-| **Next Target** | Phase 4 Execution (Frosted glass Navbar with mobile drawer, full-bleed Hero section with headline) |
-| **Last Updated** | September 21, 2026 |
+| **Next Target** | Phase 5 Execution (Rooms & Suites section, two-tone room cards, interactive carousel with purple controls) |
+| **Last Updated** | September 22, 2026 |
 
 ---
 
@@ -22,7 +22,7 @@ This live document tracks development progress, milestones, phase tasks, and del
 - [x] **Milestone 1: Design System Foundation** (Tokens, Typography, Assets, Utils)
 - [x] **Milestone 2: Design System Primitives & Components** (Buttons, Badges, Inputs, Divider)
 - [x] **Milestone 3: Data Contracts & Models** (Rooms, Experiences, Dining, Policies, Amenities)
-- [ ] **Milestone 4: Above the Fold Experience** (Navbar, Hero Section)
+- [x] **Milestone 4: Above the Fold Experience** (Navbar, Hero Section)
 - [ ] **Milestone 5: Core Features & Galleries** (Rooms Carousel, Experience Pillars, Dining Arc)
 - [ ] **Milestone 6: Guest Information & Booking** (Before You Arrive, Amenities, Postcard Form)
 - [ ] **Milestone 7: Footer & Brand Presence** (Royal Purple Footer, Newsletter)
@@ -75,10 +75,10 @@ This live document tracks development progress, milestones, phase tasks, and del
 ---
 
 ### Phase 4: Hero Section & Frosted Navigation
-- [ ] Build `components/sections/navbar.tsx` with glassmorphic backdrop filter
-- [ ] Add mobile hamburger navigation drawer
-- [ ] Build `components/sections/hero-section.tsx` with full-bleed facade image
-- [ ] Add dark gradient overlay and monumental serif "HOTEL ITAGI SQUARE"
+- [x] `[commit: 4d9725e]` Build `components/sections/navbar.tsx` with glassmorphic backdrop filter
+- [x] `[commit: 4d9725e]` Add mobile hamburger navigation drawer
+- [x] `[commit: 4d9725e]` Build `components/sections/hero-section.tsx` with full-bleed facade image
+- [x] `[commit: 4d9725e]` Add dark gradient overlay and monumental serif "HOTEL ITAGI SQUARE"
 
 ---
 
@@ -143,3 +143,4 @@ This live document tracks development progress, milestones, phase tasks, and del
 | **2026-09-21** | **Phase 1: Foundation** | `b60ce03` | **Completed Phase 1**: Extracted & optimized high-res imagery into `public/images/` (hero, rooms, dining, experiences, botanical icon); installed `clsx`, `tailwind-merge`, `lucide-react`; created `lib/utils.ts` (`cn()` helper); configured `Cormorant Garamond` & `Inter` in `app/layout.tsx`; configured Tailwind CSS v4 `@theme` tokens in `app/globals.css`; verified clean production build with Turbopack (0 errors). | Antigravity AI |
 | **2026-09-21** | **Phase 2: Primitives** | `25a57a5` | **Completed Phase 2**: Implemented atomic primitives in `components/ui/`: `Button` (with hero-pill, purple-pill, vintage-ticket, icon-circle variants), `UnderlineInput` (minimalist underlined form inputs with floating labels), `RoomSpecBadge` (area, bed, guests indicators with Lucide icons), and `VintageDivider` (botanical rosehip engraving SVG with hairline dividers); verified clean build (0 errors). | Antigravity AI |
 | **2026-09-21** | **Phase 3: Data Contracts** | `5932f66` | **Completed Phase 3 (Milestone 3)**: Created TypeScript interfaces in `types/` (`room.ts`, `experience.ts`, `culinary.ts`, `guide.ts`, `contact.ts`) and populated type-safe static datasets in `data/`: `rooms.ts` (Suite Room, Executive Suite, Executive Room with specs), `experiences.ts` (UNWIND, DINE, EXPLORE, CONNECT), `culinary.ts` (Indo-Arabic dishes & ribbon arc data), `policies.ts` (check-in/out, proximity landmarks, essentials), and `amenities.ts` (4-category hotel amenities); verified clean build (0 errors). | Antigravity AI |
+| **2026-09-22** | **Phase 4: Above The Fold** | `4d9725e` | **Completed Phase 4 (Milestone 4)**: Built modular `Navbar` with frosted glassmorphism, scroll detection, mobile hamburger drawer, and `BOOK NOW` CTA; built full-bleed `HeroSection` with entrance facade image, ambient dark gradients, and monumental serif headline `HOTEL ITAGI SQUARE` with action CTAs; verified clean build (0 errors). | Antigravity AI |
