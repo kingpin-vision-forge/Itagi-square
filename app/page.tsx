@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from '@/components/sections/navbar';
 import { HeroSection } from '@/components/sections/hero-section';
+import { RoomsSuitesSection } from '@/components/sections/rooms-suites-section';
 import { Button } from '@/components/ui/button';
 import { UnderlineInput } from '@/components/ui/underline-input';
 import { RoomSpecBadge } from '@/components/ui/room-spec-badge';
@@ -15,17 +16,20 @@ export default function Home() {
       {/* Hero Entrance Section */}
       <HeroSection />
 
+      {/* Rooms & Suites Showcase Section (Figma Desktop - 3.png) */}
+      <RoomsSuitesSection />
+
       {/* Component & Design Primitives Showcase */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xs uppercase tracking-[0.25em] text-[#481454] font-semibold">
-            Milestone 4 Complete
+            Phase 5 Complete
           </span>
           <h2 className="text-3xl md:text-5xl font-serif mt-3 tracking-wide text-[#1D161F]">
-            Above The Fold Experience
+            Rooms & Suites Interactive Showcase
           </h2>
           <p className="mt-4 text-sm text-[#5C5260] font-sans">
-            Modular Navbar with mobile slide drawer, full-bleed hero entrance facade, and design primitives.
+            Two-tone accommodation cards with circular navigation controls, specs, and mobile swipe.
           </p>
         </div>
 
