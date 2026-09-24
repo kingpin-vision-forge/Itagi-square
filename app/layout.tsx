@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Luxurious_Script, Uncial_Antiqua } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
-  variable: "--font-serif",
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-sans",
+const uncial = Uncial_Antiqua({
+  variable: "--font-uncial",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "400",
+  display: "swap",
+});
+
+const luxuriousScript = Luxurious_Script({
+  variable: "--font-luxurious",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -42,8 +50,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${inter.variable} h-full antialiased scroll-smooth`}
+      className={`${cormorant.variable} ${uncial.variable} ${luxuriousScript.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        {/* Material Symbols Rounded is not served by next/font */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-[#F4F0E8] text-[#1D161F]">
         {children}
       </body>

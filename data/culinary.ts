@@ -5,7 +5,7 @@ export const diningData: DiningSectionData = {
   subtitle:
     'Thoughtfully crafted flavours, inviting spaces, and moments made to be savoured.',
   ribbonImage: '/images/dining/ribbon-full.png',
-  ctaLabel: 'EXPLORE ITAGI',
+  ctaLabel: 'EXPLORE Al-QUDS',
   ctaHref: '#contact',
   items: [
     {

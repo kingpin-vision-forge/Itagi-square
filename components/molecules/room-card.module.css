@@ -1,0 +1,139 @@
+.card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border: 1px solid #191919;
+  background: #4a1d71;
+  color: #171717;
+}
+
+.imageFrame {
+  position: relative;
+  height: 261px;
+  overflow: hidden;
+}
+
+.image {
+  /* The supplied crops include a thin top margin and a title under the photo.
+     Trim the margin; the HTML face below covers the original title. */
+  top: -8px !important;
+  left: -1px !important;
+  width: calc(100% + 2px) !important;
+  height: calc(100% + 8px) !important;
+  object-fit: fill;
+}
+
+.face {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 300px;
+  margin: -60px 24px 0;
+  padding: 13px 28px 14px;
+  background: #dcd3c3;
+}
+
+.title {
+  margin: 0;
+  color: #4a1d71;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.description {
+  min-height: 54px;
+  margin: 18px 0 0;
+  color: #5c5856;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.specs li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.specs svg {
+  width: 21px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #4a1d71;
+  stroke-width: 2;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 26px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 16px;
+  background: #4a1d71;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.button:focus-visible {
+  outline: 2px solid #4a1d71;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background: #602b88;
+  }
+}
+
+@media (max-width: 1199px) {
+  .face {
+    margin-inline: 18px;
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 639px) {
+  .imageFrame {
+    height: auto;
+    aspect-ratio: 360 / 261;
+  }
+
+  .face {
+    margin-top: -16.67%;
+  }
+}

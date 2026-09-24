@@ -17,7 +17,7 @@ export function BrandFooter() {
           <div className="flex flex-col">
             <Link
               href="/"
-              className="text-3xl sm:text-4xl font-serif tracking-[0.18em] uppercase font-normal text-white hover:text-[#EADBEE] transition-colors"
+              className="text-3xl sm:text-4xl font-uncial tracking-[0.12em] uppercase font-normal text-white hover:text-[#EADBEE] transition-colors"
             >
               ITAGI
             </Link>
@@ -186,11 +186,11 @@ export function BrandFooter() {
       <div className="w-full border-t border-white/15 my-8 md:my-14" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 text-center py-6 md:py-10">
-        <h1 className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-serif tracking-[0.16em] uppercase font-normal text-white select-none leading-none">
+        <h1 className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-uncial tracking-[0.1em] uppercase font-normal text-white select-none leading-none">
           ITAGI
         </h1>
         <p className="text-xl sm:text-2xl md:text-4xl font-serif italic tracking-[0.12em] text-[#EADBEE] mt-3 md:mt-6 select-none font-light">
-          hospitalities & retails
+          hospitality & retail
         </p>
       </div>
 
@@ -226,12 +226,12 @@ export function BrandFooter() {
       {/* CREATIVE AGENCY WATERMARK BAR (KINGPIN VISION FORGE from Frame 42.png)    */}
       {/* ========================================================================= */}
       <div className="w-full bg-white py-6 px-4 flex flex-col items-center justify-center border-t border-gray-200 select-none">
-        <div className="flex items-center text-xl sm:text-2xl font-bold tracking-[0.3em]">
+        <div className="flex items-center font-material-rounded text-xl sm:text-2xl font-bold tracking-[0.3em]">
           <span className="text-red-600">K</span>
           <span className="text-black">INGPI</span>
           <span className="text-blue-600">N</span>
         </div>
-        <span className="font-serif italic text-sm sm:text-base text-gray-700 tracking-[0.15em] -mt-1 font-medium">
+        <span className="font-luxurious text-lg sm:text-xl text-gray-700 tracking-[0.05em] -mt-1">
           Vision Forge
         </span>
       </div>

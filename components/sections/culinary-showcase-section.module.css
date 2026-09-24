@@ -1,0 +1,145 @@
+.section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 48px 0 88px;
+  background: #dcd3c3;
+  color: #080807;
+  scroll-margin-top: 96px;
+}
+
+.intro {
+  position: relative;
+  z-index: 1;
+  padding-inline: 24px;
+  text-align: center;
+}
+
+.heading {
+  max-width: 660px;
+  margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.subtitle {
+  max-width: 680px;
+  margin: 9px auto 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.ribbon {
+  margin-top: -45px;
+}
+
+.action {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+  padding-inline: 24px;
+  pointer-events: none;
+}
+
+.button {
+  display: inline-flex;
+  width: 435px;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 28px;
+  padding: 16px 28px;
+  background: #4a1d71;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 150ms ease;
+}
+
+.button:focus-visible {
+  outline: 2px solid #4a1d71;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background: #602b88;
+  }
+}
+
+@media (min-width: 1600px) {
+  .section {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .heading {
+    max-width: 590px;
+    font-size: 48px;
+  }
+
+  .subtitle {
+    max-width: 620px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .ribbon {
+    margin-top: -24px;
+  }
+
+  .action {
+    margin-top: -32px;
+  }
+}
+
+@media (max-width: 639px) {
+  .section {
+    padding-block: 44px 56px;
+  }
+
+  .heading {
+    max-width: 360px;
+    font-size: clamp(32px, 8.6vw, 44px);
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    max-width: 34ch;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .ribbon {
+    margin-top: -10px;
+  }
+
+  .action {
+    justify-content: flex-start;
+    margin-top: 8px;
+    padding-right: 80px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}

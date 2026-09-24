@@ -1,0 +1,87 @@
+.gallery {
+  position: relative;
+  width: 100%;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1440 / 554;
+}
+
+.canvas,
+.fallback,
+.outlines {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas {
+  opacity: 0;
+}
+
+.canvas[data-ready='true'] {
+  opacity: 1;
+}
+
+.stage:has(.canvas[data-ready='true']) .fallback {
+  visibility: hidden;
+}
+
+.outlines {
+  pointer-events: none;
+  fill: none;
+  stroke: #171411;
+  stroke-width: 1;
+}
+
+.outlines path {
+  vector-effect: non-scaling-stroke;
+}
+
+.playback {
+  position: absolute;
+  z-index: 3;
+  right: 32px;
+  bottom: 0;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid #4a1d71;
+  border-radius: 50%;
+  background: #dcd3c3;
+  color: #4a1d71;
+  cursor: pointer;
+}
+
+.playback svg {
+  width: 18px;
+  height: 18px;
+}
+
+.playback:focus-visible {
+  outline: 2px solid #4a1d71;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .playback:hover {
+    background: #cfc2ae;
+  }
+}
+
+@media (max-width: 639px) {
+  .stage {
+    aspect-ratio: auto;
+    height: 340px;
+  }
+
+  .playback {
+    right: 20px;
+    bottom: -52px;
+  }
+}

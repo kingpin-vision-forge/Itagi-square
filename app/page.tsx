@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from '@/components/sections/navbar';
 import { HeroSection } from '@/components/sections/hero-section';
+import { AboutIntroSection } from '@/components/sections/about-intro-section';
 import { RoomsSuitesSection } from '@/components/sections/rooms-suites-section';
 import { MoreThanAStaySection } from '@/components/sections/more-than-a-stay-section';
 import { CulinaryShowcaseSection } from '@/components/sections/culinary-showcase-section';
@@ -16,6 +17,9 @@ export default function Home() {
 
       {/* Hero Entrance Section (Figma Desktop - 1.png) */}
       <HeroSection />
+
+      {/* About Section (context/about.png) */}
+      <AboutIntroSection />
 
       {/* Rooms & Suites Showcase Section (Figma Desktop - 3.png) */}
       <RoomsSuitesSection />
