@@ -1,0 +1,120 @@
+.page {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 120px 24px;
+  background: #f1ede3;
+  color: #4a1d71;
+}
+
+.back {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.content {
+  width: 100%;
+  max-width: 620px;
+}
+
+.heading {
+  margin: 0 0 48px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.numbers {
+  margin: 0;
+  border-top: 1px solid #4a1d7140;
+  padding: 0;
+  list-style: none;
+}
+
+.numbers li {
+  border-bottom: 1px solid #4a1d7140;
+}
+
+.number {
+  display: flex;
+  min-height: 112px;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 8px;
+  color: inherit;
+  font-size: clamp(25px, 4.7vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.phone {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  stroke-width: 1.5;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-left: auto;
+  stroke-width: 1.5;
+}
+
+.back:focus-visible,
+.number:focus-visible {
+  outline: 2px solid #4a1d71;
+  outline-offset: 5px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .number:hover {
+    background: #e8e2d5;
+  }
+
+  .back:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 639px) {
+  .back {
+    top: 20px;
+    left: 24px;
+  }
+
+  .heading {
+    margin-bottom: 36px;
+  }
+
+  .number {
+    min-height: 92px;
+    gap: 14px;
+    padding-inline: 2px;
+  }
+
+  .phone,
+  .arrow {
+    width: 20px;
+    height: 20px;
+  }
+}

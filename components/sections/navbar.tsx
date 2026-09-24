@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 export interface NavItem {
@@ -88,15 +87,11 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
     };
   }, [mobileMenuOpen]);
 
-  const handleBookNow = () => {
+  const handleBookNow = (event: React.MouseEvent<HTMLAnchorElement>) => {
     setMobileMenuOpen(false);
     if (onBookNowClick) {
+      event.preventDefault();
       onBookNowClick();
-    } else {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
-      }
     }
   };
 
@@ -138,14 +133,13 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
 
         {/* Action Button (Desktop) & Hamburger (Mobile) */}
         <div className="flex items-center gap-3 justify-self-end">
-          <Button
-            variant="hero-pill"
-            size="md"
+          <Link
+            href="/book-now"
             onClick={handleBookNow}
-            className="h-11 border border-white px-5 py-0 text-base font-medium tracking-normal shadow-none transition-colors hover:translate-y-0 hover:shadow-none motion-reduce:transition-none md:h-12 md:w-[160px] md:text-xl lg:w-[198px] lg:text-[22px]"
+            className="inline-flex items-center justify-center rounded-full bg-[#ADCDEE] text-[#1D161F] hover:bg-[#96BFEC] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700 h-11 border border-white px-5 py-0 text-base font-medium tracking-normal transition-colors motion-reduce:transition-none md:h-12 md:w-[160px] md:text-xl lg:w-[198px] lg:text-[22px]"
           >
             BOOK NOW
-          </Button>
+          </Link>
 
           {/* Mobile Hamburger Toggle */}
           <button
@@ -219,20 +213,19 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
 
         <div className="space-y-4 pt-6 border-t border-[#CFC2AE]/60">
           <a
-            href="tel:+918323500700"
+            href="tel:08352270244"
             className="flex items-center space-x-3 text-xs tracking-wider text-[#5C5260]"
           >
             <Phone className="w-4 h-4 text-[#481454]" />
             <span>+91 8323500700</span>
           </a>
-          <Button
-            variant="hero-pill"
-            size="lg"
+          <Link
+            href="/book-now"
             onClick={handleBookNow}
-            className="w-full justify-center tracking-widest text-xs"
+            className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#ADCDEE] px-8 py-3.5 text-[#1D161F] hover:bg-[#96BFEC] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700 tracking-widest text-xs"
           >
             BOOK NOW
-          </Button>
+          </Link>
         </div>
       </div>
     </>

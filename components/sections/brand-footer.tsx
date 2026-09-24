@@ -78,18 +78,18 @@ export function BrandFooter() {
             <div className="space-y-2 text-xs sm:text-sm text-[#D5C4DB] font-sans mb-8">
               <p>
                 <a
-                  href="tel:18009001200"
+                  href="tel:08352 270255"
                   className="hover:text-white transition-colors"
                 >
-                  1-800-900-1200 (Toll Free)
+                  08352 270255 (Toll Free)
                 </a>
               </p>
               <p>
                 <a
-                  href="tel:+918323500700"
+                  href="tel:08352270244"
                   className="hover:text-white transition-colors"
                 >
-                  +91 8323500700 / +91 123 456 7890
+                  08352 270244
                 </a>
               </p>
               <p>
@@ -155,7 +155,7 @@ export function BrandFooter() {
                   </Link>
                 </p>
                 <p>
-                  <Link href="#contact" className="hover:text-white transition-colors">
+                  <Link href="/book-now" className="hover:text-white transition-colors">
                     Book a Reservation
                   </Link>
                 </p>
