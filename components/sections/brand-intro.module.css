@@ -1,0 +1,44 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.overlay[data-active='true'] {
+  display: block;
+  pointer-events: auto;
+}
+
+.canvas {
+  display: block;
+}
+
+.wordmark {
+  font-family: var(--font-uncial), 'Uncial Antiqua', serif;
+  font-size: clamp(64px, 17vw, 220px);
+  font-weight: 400;
+  letter-spacing: 0.035em;
+  text-anchor: middle;
+  dominant-baseline: central;
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+:global(html:has(#brand-intro[data-active='true'])) {
+  overflow: hidden;
+}
+
+/* The real hero sits behind the cutout; show its type and navigation at exit. */
+:global(main:has(#brand-intro[data-active='true']) #hero-title),
+:global(main:has(#brand-intro[data-active='true']) > header) {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay[data-active='true'] {
+    background: #F4F0E8;
+  }
+}

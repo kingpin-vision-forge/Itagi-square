@@ -99,7 +99,7 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
     <>
       <header
         className={cn(
-          'fixed inset-x-0 top-0 z-50 grid h-[72px] grid-cols-[1fr_auto] items-center bg-white/85 px-5 font-serif text-[#1D161F] backdrop-blur-md transition-transform duration-200 ease-out motion-reduce:transition-none md:h-24 md:grid-cols-[1fr_auto_1fr] md:px-8 lg:px-10 focus-within:translate-y-0',
+          'fixed inset-x-0 top-0 z-50 grid h-[72px] grid-cols-[1fr_auto] items-center bg-white/85 px-5 font-serif text-[#1D161F] backdrop-blur-md transition-transform duration-200 ease-out motion-reduce:transition-none md:h-20 md:grid-cols-[1fr_auto_1fr] md:px-8 lg:px-10 focus-within:translate-y-0',
           isHidden && !mobileMenuOpen ? '-translate-y-full' : 'translate-y-0',
           className
         )}

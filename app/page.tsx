@@ -8,10 +8,12 @@ import { CulinaryShowcaseSection } from '@/components/sections/culinary-showcase
 import { GuestGuideSection } from '@/components/sections/guest-guide-section';
 import { ContactPostcardSection } from '@/components/sections/contact-postcard-section';
 import { BrandFooter } from '@/components/sections/brand-footer';
+import { BrandIntro } from '@/components/sections/brand-intro';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F4F0E8] text-[#1D161F] flex flex-col selection:bg-[#481454] selection:text-white">
+      <BrandIntro />
       {/* Frosted Glass Luxury Navigation Bar */}
       <Navbar />
 

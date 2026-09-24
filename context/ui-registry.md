@@ -173,6 +173,12 @@ Pill-shaped inline subscription component.
 - **Design Reference**: `Desktop - 1.png`
 - **Features**: Full-bleed hotel entrance image, dark gradient overlay for contrast, monumental serif headline "HOTEL ITAGI SQUARE".
 
+### 4.2.1 `BrandIntro`
+- **File Path**: `components/sections/brand-intro.tsx` and `brand-intro.module.css`.
+- **Visuals**: Full-screen sand (`#F4F0E8`) with a centered Uncial Antiqua ITAGI wordmark in purple (`#481454`). The ink fades into an SVG cutout of the actual hero; the cutout expands to reveal the page.
+- **Motion**: Native Web Animations API; 1.95-second sequence after a bounded wait for the hero/font. Expansion uses `cubic-bezier(0.77, 0, 0.175, 1)`; ink and exit use `cubic-bezier(0.23, 1, 0.32, 1)`.
+- **Behavior**: Home page only, on every full page load and refresh. Inline activation runs before first paint, with no session-storage limit. Remains hidden without JavaScript. Keyboard input dismisses immediately; reduced motion uses a 200ms fade. An independent 4.5-second timeout uncovers the page even if hydration fails.
+
 ### 4.3 `RoomsSuitesSection`
 - **File Path**: `components/sections/rooms-suites-section.tsx`
 - **Design Reference**: `Desktop - 3.png`

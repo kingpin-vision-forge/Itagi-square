@@ -15,7 +15,7 @@ export function HeroSection({ className }: HeroSectionProps) {
       )}
     >
       <Image
-        src="/images/hero/entrance-clean.png"
+        src="/images/hero/hotel-exterior.png"
         alt="Hotel Itagi Square entrance framed by palms, with warmly lit doors and steps"
         fill
         preload
