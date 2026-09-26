@@ -77,8 +77,7 @@ export function HeroSection({ className }: HeroSectionProps) {
         <h1
           ref={titleRef}
           id="hero-title"
-          className="flex flex-col items-center px-4 text-center font-normal leading-none tracking-normal text-white"
-          style={{ fontFamily: '"Times New Roman", Times, serif' }}
+          className="flex flex-col items-center px-4 text-center font-serif font-normal leading-none tracking-normal text-white"
         >
           <span className="block text-[clamp(64px,9.722vw,140px)]">HOTEL</span>
           <span className="block whitespace-nowrap text-[clamp(40px,7.222vw,104px)]">

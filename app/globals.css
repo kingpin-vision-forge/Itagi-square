@@ -30,9 +30,6 @@
   /* Cormorant Garamond is the single site-wide typeface */
   --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-uncial: var(--font-uncial), "Uncial Antiqua", serif;
-  --font-luxurious: var(--font-luxurious), "Luxurious Script", cursive;
-  --font-material-rounded: "Material Symbols Rounded", sans-serif;
 }
 
 @layer base {

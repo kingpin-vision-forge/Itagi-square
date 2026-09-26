@@ -23,7 +23,7 @@ export function AboutIntroSection({ className }: AboutIntroSectionProps) {
     >
       <h2 data-reveal="children" data-reveal-mobile="self" id="about-title" className={styles.statement}>
         <span>Itagi Square is a luxury boutique hotel</span>{' '}
-        <span>in the outskirts of Vijayapura, created</span>{' '}
+        <span>in the heart of the Vijayapura city, created</span>{' '}
         <span>to offer a truly unique experience.</span>
       </h2>
 
@@ -35,7 +35,7 @@ export function AboutIntroSection({ className }: AboutIntroSectionProps) {
         </h3>
         <p className={styles.description}>
           Settle into thoughtful comfort at Hotel Itagi Square, where contemporary hospitality
-          meets the character of Goa. From relaxed spaces to warm, attentive service, every detail
+          meets the character of Vijayapura. From relaxed spaces to warm, attentive service, every detail
           is designed to make your stay feel effortless.
         </p>
       </div>

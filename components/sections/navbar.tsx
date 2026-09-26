@@ -213,11 +213,11 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
 
         <div className="space-y-4 pt-6 border-t border-[#CFC2AE]/60">
           <a
-            href="tel:08352270244"
+            href="tel:+918197788977"
             className="flex items-center space-x-3 text-xs tracking-wider text-[#5C5260]"
           >
             <Phone className="w-4 h-4 text-[#481454]" />
-            <span>+91 8323500700</span>
+            <span>+91 81977 88977</span>
           </a>
           <Link
             href="/book-now"

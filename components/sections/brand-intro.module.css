@@ -17,7 +17,7 @@
 }
 
 .wordmark {
-  font-family: var(--font-uncial), 'Uncial Antiqua', serif;
+  font-family: var(--font-serif);
   font-size: clamp(64px, 17vw, 220px);
   font-weight: 400;
   letter-spacing: 0.035em;

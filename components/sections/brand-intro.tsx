@@ -44,7 +44,7 @@ export function BrandIntro() {
     async function play() {
       const heroImage = document.querySelector<HTMLImageElement>('[aria-labelledby="hero-title"] img');
       const assets = Promise.allSettled([
-        document.fonts.load('160px "Uncial Antiqua"'),
+        document.fonts.load('160px "Cormorant Garamond"'),
         document.fonts.ready,
         heroImage?.decode(),
       ]);

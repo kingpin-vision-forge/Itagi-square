@@ -24,7 +24,7 @@ export function BrandFooter() {
           <div className="flex flex-col">
             <Link
               href="/"
-              className="text-3xl sm:text-4xl font-uncial tracking-[0.12em] uppercase font-normal text-white hover:text-[#EADBEE] transition-colors"
+              className="text-3xl sm:text-4xl font-serif tracking-[0.12em] uppercase font-normal text-white hover:text-[#EADBEE] transition-colors"
             >
               ITAGI
             </Link>
@@ -85,6 +85,14 @@ export function BrandFooter() {
             <div className="space-y-2 text-xs sm:text-sm text-[#D5C4DB] font-sans mb-8">
               <p>
                 <a
+                  href="tel:+918197788977"
+                  className="hover:text-white transition-colors"
+                >
+                  +91 81977 88977
+                </a>
+              </p>
+              <p>
+                <a
                   href="tel:08352 270255"
                   className="hover:text-white transition-colors"
                 >
@@ -101,10 +109,10 @@ export function BrandFooter() {
               </p>
               <p>
                 <a
-                  href="mailto:reservations@itagisquare.com"
+                  href="mailto:hotelitagisquare01@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  reservations@itagisquare.com
+                  hotelitagisquare01@gmail.com
                 </a>
               </p>
             </div>
@@ -114,10 +122,10 @@ export function BrandFooter() {
             </h4>
             <p className="text-xs sm:text-sm text-[#D5C4DB] font-sans">
               <a
-                href="mailto:contact@itagi.com"
+                href="mailto:hotelitagisquare01@gmail.com"
                 className="hover:text-white transition-colors"
               >
-                contact@itagi.com
+                hotelitagisquare01@gmail.com
               </a>
             </p>
           </div>
@@ -194,7 +202,7 @@ export function BrandFooter() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 text-center py-6 md:py-10">
         <div className="overflow-hidden py-2">
-          <h2 data-reveal="self" data-reveal-distance="36" data-reveal-duration="0.65" className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-uncial tracking-[0.1em] uppercase font-normal text-white select-none leading-none">
+          <h2 data-reveal="self" data-reveal-distance="36" data-reveal-duration="0.65" className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-serif tracking-[0.1em] uppercase font-normal text-white select-none leading-none">
             ITAGI
           </h2>
         </div>
@@ -235,12 +243,12 @@ export function BrandFooter() {
       {/* CREATIVE AGENCY WATERMARK BAR (KINGPIN VISION FORGE from Frame 42.png)    */}
       {/* ========================================================================= */}
       <div className="w-full bg-white py-6 px-4 flex flex-col items-center justify-center border-t border-gray-200 select-none">
-        <div className="flex items-center font-material-rounded text-xl sm:text-2xl font-bold tracking-[0.3em]">
+        <div className="flex items-center font-serif text-xl sm:text-2xl font-bold tracking-[0.3em]">
           <span className="text-red-600">K</span>
           <span className="text-black">INGPI</span>
           <span className="text-blue-600">N</span>
         </div>
-        <span className="font-luxurious text-lg sm:text-xl text-gray-700 tracking-[0.05em] -mt-1">
+        <span className="font-serif text-lg sm:text-xl italic text-gray-700 tracking-[0.05em] -mt-1">
           Vision Forge
         </span>
       </div>

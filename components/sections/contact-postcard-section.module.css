@@ -21,7 +21,7 @@
 
 .heading {
   margin: 6px 0 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font-serif);
   font-size: 34px;
   font-weight: 400;
   line-height: 42px;
@@ -38,7 +38,7 @@
   padding: 14px 18px;
   background: white;
   color: #443362;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font-serif);
   font-size: 20px;
   line-height: 1.45;
   caret-color: #6750a4;
@@ -135,7 +135,7 @@
   top: calc(100% + 4px);
   left: 0;
   color: #a22940;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-serif);
   font-size: 11px;
   line-height: 12px;
 }
@@ -176,7 +176,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font-serif);
   font-size: 25px;
   font-weight: 400;
   line-height: 1;
@@ -198,7 +198,7 @@
 .submissionMessage {
   margin: 18px 0 0;
   color: #6750a4;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-serif);
   font-size: 13px;
   line-height: 1.5;
 }
