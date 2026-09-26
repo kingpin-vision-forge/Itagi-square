@@ -17,18 +17,18 @@ export function PillarCard({ pillar, className, onClick }: PillarCardProps) {
   const content = (
     <div
       className={cn(
-        'group relative w-full aspect-[3/4] sm:aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(72,20,84,0.22)] hover:-translate-y-1.5 cursor-pointer bg-[#2B0736]',
+        'group relative w-full aspect-[3/4] sm:aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-[transform,box-shadow] duration-200 motion-reduce:transition-none hover:shadow-[0_20px_40px_rgba(72,20,84,0.22)] motion-safe:hover:-translate-y-1.5 cursor-pointer bg-[#2B0736]',
         className
       )}
       onClick={() => onClick && onClick(pillar)}
     >
-      {/* Background Photography */}
+      {/* Crop the reference image above its baked-in label and button. */}
       <Image
         src={pillar.image}
         alt={pillar.alt || pillar.title}
         fill
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 60vw"
+        className="!h-[160%] object-cover object-top transition-transform duration-500 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-105"
       />
 
       {/* Ambient Gradient Overlays for High Legibility */}
@@ -45,14 +45,14 @@ export function PillarCard({ pillar, className, onClick }: PillarCardProps) {
               {pillar.subtitle}
             </span>
           )}
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif tracking-[0.14em] text-white uppercase italic sm:not-italic group-hover:italic transition-all">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif tracking-[0.14em] text-white uppercase italic sm:not-italic group-hover:italic">
             {pillar.title}
           </h3>
         </div>
 
         {/* Circular Action Button with Right Arrow */}
-        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-[#1D161F] flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#ADCDEE] group-hover:text-[#1D161F]">
-          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5" />
+        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-[#1D161F] flex items-center justify-center shadow-lg transition-transform duration-300 motion-safe:group-hover:scale-110 group-hover:bg-[#ADCDEE] group-hover:text-[#1D161F]">
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 motion-safe:group-hover:translate-x-0.5" />
         </div>
       </div>
     </div>

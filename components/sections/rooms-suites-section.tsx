@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { RoomData } from '@/types/room';
 import { roomsData } from '@/data/rooms';
 import { RoomCard } from '@/components/molecules/room-card';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { cn } from '@/lib/utils';
 import styles from './rooms-suites-section.module.css';
 
@@ -19,6 +20,8 @@ export function RoomsSuitesSection({
   className,
   onExploreRoom,
 }: RoomsSuitesSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
   const [activeIndex, setActiveIndex] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const currentIndex = rooms.length ? activeIndex % rooms.length : 0;
@@ -50,8 +53,8 @@ export function RoomsSuitesSection({
   if (!rooms.length) return null;
 
   return (
-    <section id="rooms" aria-labelledby="rooms-heading" className={cn(styles.section, className)}>
-      <div className={styles.intro}>
+    <section ref={sectionRef} id="rooms" aria-labelledby="rooms-heading" className={cn(styles.section, className)}>
+      <div data-reveal="children" className={styles.intro}>
         <h2 id="rooms-heading" className={styles.heading}>ROOMS AND SUITES</h2>
         <p className={styles.subtitle}>
           Thoughtfully designed spaces where contemporary comfort meets effortless relaxation.
@@ -83,7 +86,7 @@ export function RoomsSuitesSection({
           <ChevronLeft aria-hidden="true" />
         </button>
 
-        <div id="room-cards" className={styles.cards}>
+        <div data-reveal="children" data-reveal-duration="0.5" id="room-cards" className={styles.cards}>
           {orderedRooms.map((room) => (
             <RoomCard key={room.id} room={room} onExplore={onExploreRoom} className={styles.slide} />
           ))}

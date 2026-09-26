@@ -1,5 +1,7 @@
 'use client';
 
+import { useRef } from 'react';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { diningData } from '@/data/culinary';
 import { CurvedRibbonGallery } from '@/components/molecules/curved-ribbon-gallery';
 import { cn } from '@/lib/utils';
@@ -11,11 +13,13 @@ export interface CulinaryShowcaseSectionProps {
 }
 
 export function CulinaryShowcaseSection({ className, onExplore }: CulinaryShowcaseSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
   const { title, subtitle, ribbonImage, ctaLabel, ctaHref } = diningData;
 
   return (
-    <section id="dining" aria-labelledby="dining-heading" className={cn(styles.section, className)}>
-      <div className={styles.intro}>
+    <section ref={sectionRef} id="dining" aria-labelledby="dining-heading" className={cn(styles.section, className)}>
+      <div data-reveal="children" className={styles.intro}>
         <h2 id="dining-heading" className={styles.heading}>{title}</h2>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>

@@ -1,9 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Pause, Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import styles from './curved-ribbon-gallery.module.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export interface CurvedRibbonGalleryProps {
   imageSrc?: string;
@@ -72,7 +76,7 @@ export function CurvedRibbonGallery({
   );
   const [playOverride, setPlayOverride] = useState<boolean | null>(null);
   const [available, setAvailable] = useState(false);
-  const playing = playOverride ?? !reducedMotion;
+  const playing = !reducedMotion && (playOverride ?? true);
   const playingRef = useRef(playing);
 
   useEffect(() => {
@@ -138,10 +142,7 @@ export function CurvedRibbonGallery({
     const rotationUniform = gl.getUniformLocation(program, 'uRotation');
     const panelsUniform = gl.getUniformLocation(program, 'uPanels');
 
-    let frame = 0;
     let rotation = 0;
-    let previousTime = 0;
-    let inView = false;
     let ready = false;
     let disposed = false;
     let wantsMotion = playingRef.current;
@@ -154,26 +155,30 @@ export function CurvedRibbonGallery({
       gl.uniform1f(rotationUniform, rotation);
       gl.drawArrays(gl.TRIANGLES, 0, 6);
     };
-    const tick = (time: number) => {
-      frame = 0;
-      if (!ready || !wantsMotion || !inView || document.hidden || disposed) {
-        previousTime = 0;
-        return;
-      }
-      if (previousTime) rotation = (rotation + Math.min(time - previousTime, 64) / 14000) % 3;
-      previousTime = time;
-      draw();
-      frame = window.requestAnimationFrame(tick);
-    };
+    const motion = { rotation: 0 };
+    let offset = 0;
     const syncPlayback = () => {
-      window.cancelAnimationFrame(frame);
-      frame = 0;
-      previousTime = 0;
-      if (ready && wantsMotion && inView && !document.hidden && !disposed) {
-        frame = window.requestAnimationFrame(tick);
-      }
+      if (!wantsMotion || document.hidden || disposed) return;
+      rotation = motion.rotation + offset;
+      draw();
     };
+    // Reuse the existing shader; draw only when scroll progress or size changes.
+    const context = gsap.context(() => {
+      gsap.to(motion, {
+        rotation: 3,
+        ease: 'none',
+        onUpdate: syncPlayback,
+        scrollTrigger: {
+          trigger: canvas.closest('section') || canvas,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 0.4,
+        },
+      });
+    });
     controllerRef.current = (nextPlaying) => {
+      // Resume from the frozen image instead of jumping to a new photograph.
+      if (nextPlaying && !wantsMotion) offset = rotation - motion.rotation;
       wantsMotion = nextPlaying;
       syncPlayback();
     };
@@ -185,12 +190,7 @@ export function CurvedRibbonGallery({
       gl.uniform1f(panelsUniform, canvas.clientWidth < 640 ? 1.65 : 3.6);
       draw();
     };
-    const observer = new IntersectionObserver(([entry]) => {
-      inView = entry.isIntersecting;
-      syncPlayback();
-    });
     const resizeObserver = new ResizeObserver(resize);
-    observer.observe(canvas);
     resizeObserver.observe(canvas);
     document.addEventListener('visibilitychange', syncPlayback);
     const handleContextLost = (event: Event) => {
@@ -216,9 +216,8 @@ export function CurvedRibbonGallery({
     return () => {
       disposed = true;
       image.onload = null;
-      window.cancelAnimationFrame(frame);
+      context.revert();
       controllerRef.current = null;
-      observer.disconnect();
       resizeObserver.disconnect();
       document.removeEventListener('visibilitychange', syncPlayback);
       canvas.removeEventListener('webglcontextlost', handleContextLost);
@@ -245,12 +244,12 @@ export function CurvedRibbonGallery({
           <path d="M0 554 C0 395 1440 395 1440 525" />
         </svg>
       </div>
-      {available && (
+      {available && !reducedMotion && (
         <button
           type="button"
           className={styles.playback}
           onClick={() => setPlayOverride(!playing)}
-          aria-label={playing ? 'Pause food gallery' : 'Play food gallery'}
+          aria-label={playing ? 'Pause food gallery motion' : 'Resume food gallery motion'}
           aria-pressed={!playing}
         >
           {playing ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}

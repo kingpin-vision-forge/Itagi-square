@@ -1,10 +1,17 @@
-import React from 'react';
+'use client';
+
+import { useRef } from 'react';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import Link from 'next/link';
 import { NewsletterForm } from '@/components/molecules/newsletter-form';
 
 export function BrandFooter() {
+  const footerRef = useRef<HTMLElement>(null);
+  useScrollReveal(footerRef);
+
   return (
     <footer
+      ref={footerRef}
       className="w-full bg-gradient-to-b from-[#2B0736] via-[#24052E] to-[#16021D] text-white pt-20 md:pt-28 pb-0 transition-colors"
       aria-label="Hotel Itagi Square Global Footer"
     >
@@ -186,9 +193,11 @@ export function BrandFooter() {
       <div className="w-full border-t border-white/15 my-8 md:my-14" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 text-center py-6 md:py-10">
-        <h1 className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-uncial tracking-[0.1em] uppercase font-normal text-white select-none leading-none">
-          ITAGI
-        </h1>
+        <div className="overflow-hidden py-2">
+          <h2 data-reveal="self" data-reveal-distance="36" data-reveal-duration="0.65" className="text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-uncial tracking-[0.1em] uppercase font-normal text-white select-none leading-none">
+            ITAGI
+          </h2>
+        </div>
         <p className="text-xl sm:text-2xl md:text-4xl font-serif italic tracking-[0.12em] text-[#EADBEE] mt-3 md:mt-6 select-none font-light">
           hospitality & retail
         </p>

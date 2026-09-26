@@ -143,9 +143,9 @@ Architectural arc ribbon displaying culinary specialties with concave top and co
 - **File Path**: `components/molecules/curved-ribbon-gallery.tsx`
 - **Design Reference**: `Frame 39.png`
 - **Visual Composition**:
-  - CSS/SVG masked container clipping image items into a graceful horizontal arch.
-  - High-res dish closeups (kebabs, wok delicacies, sizzlers, curries).
-  - Hover zoom on individual dishes.
+  - WebGL cylinder projection with an SVG fallback and decorative outlines.
+  - Three dish photographs sampled from the supplied artwork.
+  - Scroll-controlled rotation with a pause/resume button and a static reduced-motion view.
 
 ### 3.4 `NewsletterForm`
 Pill-shaped inline subscription component.
@@ -171,7 +171,9 @@ Pill-shaped inline subscription component.
 ### 4.2 `HeroSection`
 - **File Path**: `components/sections/hero-section.tsx`
 - **Design Reference**: `Desktop - 1.png`
-- **Features**: Full-bleed hotel entrance image, dark gradient overlay for contrast, monumental serif headline "HOTEL ITAGI SQUARE".
+- **Features**: Full-bleed hotel entrance image and monumental serif headline "HOTEL ITAGI SQUARE"; no buttons.
+- **Scroll motion**: GSAP ScrollTrigger with native scrolling and no pinning. Across the first 80% of the hero height, the image scales from 1 to 1.06 and the title rises 24px while fading out. Linear progress with 0.5-second scrub smoothing; scrolling back restores the original composition.
+- **Responsive/accessibility**: Below 768px, scale ends at 1.03, title travel is 12px, and smoothing is 0.3 seconds. Reduced motion keeps the hero static and fully visible. Content is visible before JavaScript loads. Scoped React cleanup restores styles on unmount and when motion preferences change. The separate brand intro retains its existing behavior.
 
 ### 4.2.1 `BrandIntro`
 - **File Path**: `components/sections/brand-intro.tsx` and `brand-intro.module.css`.
@@ -215,3 +217,15 @@ Pill-shaped inline subscription component.
 - **File Path**: `components/sections/brand-footer.tsx`
 - **Design Reference**: `Frame 42.png`
 - **Features**: Deep royal purple background, booking contacts, support email, quick links, newsletter subscription, monumental "ITAGI Hospitalities & Retails" logotype, legal links, and Kingpin Vision Forge credit.
+
+
+## 5. Scroll choreography
+
+- **Shared entrances**: `hooks/use-scroll-reveal.ts` opts sections in through `data-reveal`. Desktop elements rise 24px while fading in over 600ms, with a 70ms stagger and `cubic-bezier(0.23, 1, 0.32, 1)`. Entrances run once at 88% of the viewport. Mobile travel is 12px. Focus or pointer interaction completes the section's entrances immediately. Reduced motion and unhydrated content remain visible; GSAP contexts clean up on navigation and breakpoint changes.
+- **About**: Statement lines and the experience copy reveal separately. The mobile statement reveals as one block to preserve natural line wrapping. Existing opposing photo strips remain scroll-linked.
+- **Rooms**: Heading/subtitle and visible cards reveal in groups; cards use 500ms. Carousel arrows, swipe, and keyboard controls retain their behavior, with no repeat entrance on slide changes.
+- **Experience imagery**: Photographs use a taller, top-aligned crop to exclude the source artwork’s baked-in titles and buttons. Live labels remain readable in both layouts.
+- **More Than a Stay**: On fine-pointer desktops at least 1024px wide and 700px tall, a viewport-height scene pins for 180vh while four large photo panels travel horizontally, with linear progress and 600ms smoothing. Focused links are brought into view immediately. Smaller/touch viewports, reduced motion, and no-JavaScript visits retain the responsive grid.
+- **Dining**: Heading/subtitle reveal once. The existing WebGL cylinder now follows section scroll progress through one three-photo cycle, with 400ms smoothing. No autoplay loop; rendering is driven by scroll and resize. Pause freezes the image; resume continues from that image. Reduced motion freezes the gallery and hides its motion control. The SVG fallback remains available without WebGL.
+- **Footer**: The large wordmark rises 36px through a clipped wrapper over 650ms. The wordmark is an h2, preserving the hero as the page's single h1. Contact links remain stationary.
+- **Functional areas**: Guest information, the contact form, and the booking page stay static. Native page scrolling and the existing navbar/brand intro behavior are preserved.
