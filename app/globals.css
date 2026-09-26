@@ -27,9 +27,24 @@
 
   --color-gold-accent: #C79D58;
 
-  /* Cormorant Garamond is the single site-wide typeface */
+  /* Typography */
   --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-uncial: var(--font-uncial), "Uncial Antiqua", serif;
+  --font-luxurious: var(--font-luxurious), "Luxurious Script", cursive;
+  --font-material-rounded: "Material Symbols Rounded", sans-serif;
+}
+
+.font-uncial {
+  font-family: var(--font-uncial), "Uncial Antiqua", serif;
+}
+
+.font-luxurious {
+  font-family: var(--font-luxurious), "Luxurious Script", cursive;
+}
+
+.font-material-rounded {
+  font-family: var(--font-material-rounded), "Material Symbols Rounded", sans-serif;
 }
 
 @layer base {
