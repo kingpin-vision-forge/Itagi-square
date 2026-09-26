@@ -13,7 +13,7 @@ export const beforeYouArriveData = {
         { label: 'Check-in essentials', value: 'Photo ID and Credit Card' },
         {
           label: 'Cards Accepted',
-          value: 'American Express, Diner’s Club, Master Card, Visa',
+          value: 'Master Card, Visa',
         },
         {
           label: 'Special Requests',

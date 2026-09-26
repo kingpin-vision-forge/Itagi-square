@@ -10,7 +10,6 @@ export const amenitiesData = {
       items: [
         'Car parking',
         'Multi-lingual staff',
-        'Currency exchange',
         'High-speed Wi-Fi',
         'Executive meeting rooms',
         'Doctor on call',
