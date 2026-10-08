@@ -54,7 +54,7 @@ export const beforeYouArriveData = {
       title: 'HOTEL ESSENTIALS',
       items: [
         { label: 'Classification', value: 'Boutique Luxury Hotel & Suites' },
-        { label: 'GSTIN', value: '30AAOFK7973L2ZP' },
+        { label: 'GSTIN', value: '29AAPPI1149D3ZO' },
         { label: 'Fact Sheet', value: 'Available upon request at front desk' },
         { label: 'Concierge', value: '24/7 dedicated travel & dining assistance' },
       ],

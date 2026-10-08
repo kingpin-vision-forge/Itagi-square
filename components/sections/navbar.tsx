@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone } from 'lucide-react';
+import { ChevronDown, Menu, X, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export interface NavItem {
@@ -11,9 +11,15 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { label: 'ROOMS & SUITES', href: '#rooms' },
-  { label: 'DINING', href: '#dining' },
-  { label: 'MORE', href: '#guide' },
+  { label: 'ROOMS & SUITES', href: '/#rooms' },
+  { label: 'DINING', href: '/alquds' },
+];
+
+export const moreItems: NavItem[] = [
+  { label: 'About Itagi', href: '/about' },
+  { label: 'Meetings & Conferences', href: '/meetings' },
+  { label: 'Contact Us', href: '/contact' },
+  { label: 'Order Online', href: '/alquds#order' },
 ];
 
 export interface NavbarProps {
@@ -23,7 +29,11 @@ export interface NavbarProps {
 
 export function Navbar({ className, onBookNowClick }: NavbarProps) {
   const [isHidden, setIsHidden] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
+  const moreToggleRef = useRef<HTMLButtonElement>(null);
   const menuToggleRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -36,6 +46,9 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
       const currentY = Math.max(0, Math.min(window.scrollY, document.documentElement.scrollHeight - window.innerHeight));
       const delta = currentY - previousY;
       previousY = currentY;
+
+      setIsScrolled(currentY > 20);
+
       if (currentY <= 96) {
         distance = 0;
         setIsHidden(false);
@@ -45,6 +58,7 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
       distance += delta;
       if (Math.abs(distance) >= 8) {
         setIsHidden(distance > 0);
+        if (distance > 0) setMoreOpen(false);
         distance = 0;
       }
     };
@@ -53,6 +67,31 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // MORE disclosure: close on Escape (returning focus) or on a click outside it.
+  useEffect(() => {
+    if (!moreOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      setMoreOpen(false);
+      moreToggleRef.current?.focus();
+    };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!moreRef.current?.contains(event.target as Node)) setMoreOpen(false);
+    };
+    const handleFocusOut = (event: FocusEvent) => {
+      if (!moreRef.current?.contains(event.relatedTarget as Node | null)) setMoreOpen(false);
+    };
+    const more = moreRef.current;
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    more?.addEventListener('focusout', handleFocusOut);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('pointerdown', handlePointerDown);
+      more?.removeEventListener('focusout', handleFocusOut);
+    };
+  }, [moreOpen]);
 
   // Keep the drawer keyboard accessible and restore the page when it closes.
   useEffect(() => {
@@ -99,7 +138,10 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
     <>
       <header
         className={cn(
-          'fixed inset-x-0 top-0 z-50 grid h-[72px] grid-cols-[1fr_auto] items-center bg-white/85 px-5 font-serif text-[#1D161F] backdrop-blur-md transition-transform duration-200 ease-out motion-reduce:transition-none md:h-20 md:grid-cols-[1fr_auto_1fr] md:px-8 lg:px-10 focus-within:translate-y-0',
+          'fixed inset-x-0 top-0 z-50 grid h-[72px] grid-cols-[1fr_auto] items-center px-5 font-serif text-[#1D161F] transition-all duration-300 ease-out motion-reduce:transition-none md:h-20 md:grid-cols-[1fr_auto_1fr] md:px-8 lg:px-10 focus-within:translate-y-0',
+          isScrolled
+            ? 'bg-white/65 backdrop-blur-xl border-b border-white/50 shadow-[0_8px_32px_0_rgba(32,10,38,0.06)]'
+            : 'bg-white/40 backdrop-blur-md border-b border-white/30 shadow-none',
           isHidden && !mobileMenuOpen ? '-translate-y-full' : 'translate-y-0',
           className
         )}
@@ -129,6 +171,41 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
               {item.label}
             </Link>
           ))}
+
+          <div ref={moreRef} className="relative">
+            <button
+              type="button"
+              ref={moreToggleRef}
+              aria-expanded={moreOpen}
+              aria-controls="more-navigation"
+              onClick={() => setMoreOpen((open) => !open)}
+              className="inline-flex items-center gap-1.5 py-2 text-xl font-medium leading-none whitespace-nowrap transition-colors hover:text-purple-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700 lg:text-[26px]"
+            >
+              MORE
+              <ChevronDown
+                aria-hidden="true"
+                className={cn('h-5 w-5 transition-transform duration-200 motion-reduce:transition-none', moreOpen && 'rotate-180')}
+              />
+            </button>
+
+            <ul
+              id="more-navigation"
+              hidden={!moreOpen}
+              className="absolute left-1/2 top-[calc(100%+14px)] w-64 -translate-x-1/2 rounded-xl border border-white/40 bg-[#F4F0E8]/90 backdrop-blur-xl py-2 shadow-[0_12px_32px_-8px_rgba(32,10,38,0.18)]"
+            >
+              {moreItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMoreOpen(false)}
+                    className="block px-5 py-3 text-lg leading-tight transition-colors hover:bg-white/40 hover:text-purple-700 focus-visible:bg-white/40 focus-visible:outline-none"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
 
         {/* Action Button (Desktop) & Hamburger (Mobile) */}
@@ -136,7 +213,7 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
           <Link
             href="/book-now"
             onClick={handleBookNow}
-            className="inline-flex items-center justify-center rounded-full bg-[#ADCDEE] text-[#1D161F] hover:bg-[#96BFEC] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700 h-11 border border-white px-5 py-0 text-base font-medium tracking-normal transition-colors motion-reduce:transition-none md:h-12 md:w-[160px] md:text-xl lg:w-[198px] lg:text-[22px]"
+            className="inline-flex items-center justify-center rounded-full bg-[#ADCDEE]/90 hover:bg-[#96BFEC] backdrop-blur-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700 h-11 border border-white/60 px-5 py-0 text-base font-medium tracking-normal transition-colors motion-reduce:transition-none md:h-12 md:w-[160px] md:text-xl lg:w-[198px] lg:text-[22px] shadow-sm hover:shadow"
           >
             BOOK NOW
           </Link>
@@ -178,7 +255,7 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
         aria-label="Navigation menu"
         inert={!mobileMenuOpen}
         className={cn(
-          'fixed top-0 right-0 bottom-0 z-50 w-[82vw] max-w-sm overflow-y-auto bg-[#F4F0E8] shadow-2xl p-8 flex flex-col justify-between md:hidden transition-transform duration-200 ease-out motion-reduce:transition-none border-l border-[#CFC2AE]',
+          'fixed top-0 right-0 bottom-0 z-50 w-[82vw] max-w-sm overflow-y-auto bg-[#F4F0E8]/95 backdrop-blur-2xl shadow-2xl p-8 flex flex-col justify-between md:hidden transition-transform duration-200 ease-out motion-reduce:transition-none border-l border-[#CFC2AE]/60',
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
@@ -197,15 +274,15 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
             </button>
           </div>
 
-          <nav className="mt-8 flex flex-col space-y-6">
-            {navItems.map((item) => (
+          <nav aria-label="Mobile Navigation" className="mt-8 flex flex-col space-y-6">
+            {[...navItems, ...moreItems].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-base font-serif tracking-[0.15em] text-[#1D161F] hover:text-[#481454] transition-colors py-2 border-b border-[#CFC2AE]/30"
               >
-                {item.label}
+                {item.label.toUpperCase()}
               </Link>
             ))}
           </nav>

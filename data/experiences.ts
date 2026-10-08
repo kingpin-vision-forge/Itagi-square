@@ -11,7 +11,7 @@ export const experiencesSection = {
       subtitle: 'Tranquil Living',
       image: '/images/experiences/unwind.png',
       alt: 'Unwind in serene luxury suites at Hotel Itagi Square',
-      href: '#rooms',
+      href: '/#rooms',
       description:
         'Settle into curated spaces designed for unhurried comfort, soothing ambient light, and pure relaxation.',
     },
@@ -21,7 +21,7 @@ export const experiencesSection = {
       subtitle: 'Indo-Arabic Flavours',
       image: '/images/experiences/dine.png',
       alt: 'Gourmet dining and authentic cuisine at Hotel Itagi Square',
-      href: '#dining',
+      href: '/alquds',
       description:
         'Savour high-cuisine Indo-Arabic culinary artistry crafted by master chefs with time-honoured spices.',
     },
@@ -31,7 +31,7 @@ export const experiencesSection = {
       subtitle: 'Heritage & Grandeur',
       image: '/images/experiences/explore.png',
       alt: 'Architectural grandeur and local attractions at Hotel Itagi Square',
-      href: '#contact',
+      href: '/about',
       description:
         'Discover regal archways, intricate stone motifs, and historic landmarks situated right at your doorstep.',
     },
@@ -41,7 +41,7 @@ export const experiencesSection = {
       subtitle: 'Banquets & Meetings',
       image: '/images/experiences/connect.png',
       alt: 'Meeting rooms and banqueting halls at Hotel Itagi Square',
-      href: '#contact',
+      href: '/meetings',
       description:
         'Host distinguished corporate gatherings, private celebrations, and grand banquets with impeccable service.',
     },

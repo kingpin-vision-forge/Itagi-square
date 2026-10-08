@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft, ArrowUpRight, Phone } from 'lucide-react';
+import { ArrowUpRight, Phone } from 'lucide-react';
 import { bookingContacts } from '@/data/booking';
 import styles from './page.module.css';
 
@@ -12,10 +11,6 @@ export const metadata: Metadata = {
 export default function BookNowPage() {
   return (
     <main className={styles.page}>
-      <Link href="/" className={styles.back}>
-        <ArrowLeft aria-hidden="true" />
-        Back to Itagi
-      </Link>
 
       <div className={styles.content}>
         <h1 className={styles.heading}>Book your stay.</h1>

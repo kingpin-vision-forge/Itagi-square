@@ -50,6 +50,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${uncial.variable} ${luxuriousScript.variable} h-full antialiased scroll-smooth`}
     >
       <head>

@@ -1,5 +1,29 @@
 # UI Component Registry: Hotel Itagi Square
 
+## Al-Quds restaurant page (2026-10-06)
+
+Files: `app/alquds/page.tsx`, `app/alquds/page.module.css`, `components/alquds/restaurant-menu.tsx`.
+
+The user's Belisa reference establishes a separate restaurant palette, scoped entirely to `/alquds`.
+
+| Property | Pattern |
+| --- | --- |
+| Background | Cream `#eee9d2`, burgundy `#300713`, raised burgundy `#490d21` |
+| Text | Burgundy on cream, cream on burgundy; muted `#62564e` on cream |
+| Typography | Existing Cormorant Garamond; italic medium-weight headings, regular body |
+| Controls | Square cream buttons, burgundy text, 51px minimum height |
+| Images | Full-bleed hero, angled oval story photo, round dish crops, square supporting imagery |
+| Spacing | Desktop sections around 100px; mobile 72px with 26px gutters |
+| Focus | Current-color 2px outline, 6px offset; skip link visible only on focus |
+| Motion | 700ms hero opacity/12px entrance; reduced motion removes it |
+| Shadows | None on sections or controls |
+
+Category filters use native buttons with `aria-pressed` and an announced result count. Visit details use native disclosures. Menu content comes from the existing culinary data. Unconfigured delivery platforms show coming-soon text; verified URLs turn these into external links. Do not invent menu prices or opening hours.
+
+The invitation section uses the feast photograph as a full-bleed background with a 56% burgundy scrim, centered cream italic display type, and a 68-76svh responsive height. The image is decorative there because the same feast is already described elsewhere on the page.
+
+Al-Quds scroll motion lives in `components/alquds/alquds-scroll-motion.tsx`. Content groups enter once from 24px on desktop and 12px on mobile over 700ms with `power3.out`; dish cards stagger by 70ms. The order and invitation photographs scrub from 1.03 to 1.10 scale on desktop (1.06 mobile) with 600ms smoothing. Motion uses scoped `useGSAP` cleanup and is fully static under `prefers-reduced-motion`.
+
 This registry catalogues all UI components built for Hotel Itagi Square, specifying their visual role, props contracts, variants, and interactive states.
 
 ---

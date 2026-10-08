@@ -6,7 +6,7 @@ export const diningData: DiningSectionData = {
     'Thoughtfully crafted flavours, inviting spaces, and moments made to be savoured.',
   ribbonImage: '/images/dining/ribbon-full.png',
   ctaLabel: 'EXPLORE Al-QUDS',
-  ctaHref: '#contact',
+  ctaHref: '/alquds',
   items: [
     {
       id: 'kebab-platter',
