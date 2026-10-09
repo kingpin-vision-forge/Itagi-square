@@ -1,18 +1,12 @@
 'use client';
 
-import { useRef } from 'react';
-import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import Link from 'next/link';
 import { NewsletterForm } from '@/components/molecules/newsletter-form';
 import { AgencyCredit } from '@/components/sections/agency-credit';
 
 export function BrandFooter() {
-  const footerRef = useRef<HTMLElement>(null);
-  useScrollReveal(footerRef);
-
   return (
     <footer
-      ref={footerRef}
       className="w-full bg-[radial-gradient(ellipse_at_85%_15%,_#4E1360_0%,_#30093E_45%,_#1C0324_100%)] text-white pt-16 md:pt-24 pb-0 transition-colors"
       aria-label="Hotel Itagi Square Global Footer"
     >
@@ -28,7 +22,7 @@ export function BrandFooter() {
                 href="/"
                 className="text-3xl sm:text-4xl font-serif tracking-[0.08em] uppercase font-normal text-white hover:text-[#EADBEE] transition-colors"
               >
-                LOGO
+                ITAGI
               </Link>
               <p className="text-base text-[#D5C4DB] font-serif mt-1">
                 Socials
@@ -111,12 +105,7 @@ export function BrandFooter() {
                   </p>
                   <p>
                     <Link href="/meetings" className="hover:text-white transition-colors">
-                      Meetings & Conferences
-                    </Link>
-                  </p>
-                  <p>
-                    <Link href="/contact" className="hover:text-white transition-colors">
-                      Contact Us
+                      Banquet Hall
                     </Link>
                   </p>
                 </div>
@@ -145,7 +134,7 @@ export function BrandFooter() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 text-center py-6 md:py-10">
         <div className="overflow-hidden py-2">
-          <h2 data-reveal="self" data-reveal-distance="36" data-reveal-duration="0.65" className="text-6xl sm:text-8xl md:text-[9.5rem] lg:text-[11.5rem] font-uncial tracking-[0.06em] uppercase font-normal text-white select-none leading-none">
+          <h2 className="text-6xl sm:text-8xl md:text-[9.5rem] lg:text-[11.5rem] font-uncial tracking-[0.06em] uppercase font-normal text-white select-none leading-none">
             ITAGI
           </h2>
         </div>
@@ -164,15 +153,15 @@ export function BrandFooter() {
           © 2026 Hotel Itagi Square. All Rights Reserved.
         </p>
         <div className="flex flex-wrap justify-center gap-3 sm:gap-6 tracking-wide">
-          <Link href="#terms" className="hover:text-white transition-colors">
-            Terms of Service
+          <Link href="/terms" className="hover:text-white transition-colors">
+            Terms &amp; Conditions
           </Link>
           <span>|</span>
-          <Link href="#privacy" className="hover:text-white transition-colors">
+          <Link href="/privacy" className="hover:text-white transition-colors">
             Privacy Policy
           </Link>
           <span>|</span>
-          <Link href="#cookie" className="hover:text-white transition-colors">
+          <Link href="/cookies" className="hover:text-white transition-colors">
             Cookie Policy
           </Link>
           <span>|</span>

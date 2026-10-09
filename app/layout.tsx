@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Luxurious_Script, Uncial_Antiqua } from "next/font/google";
+import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -25,18 +26,42 @@ const luxuriousScript = Luxurious_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Hotel Itagi Square | Luxury Stays & Indo-Arabic Fine Dining",
+  metadataBase: new URL(siteUrl),
+  applicationName: "Hotel Itagi Square",
+  title: "Hotel Itagi Square | Hotel & Restaurant in Vijayapura",
   description:
-    "Experience effortless contemporary comfort, world-class suites, authentic Indo-Arabic fine dining, and refined banquets at Hotel Itagi Square.",
+    "Hotel Itagi Square is a boutique hotel in Vijayapura with modern rooms, Al-Quds Indo-Arabic restaurant, a banquet hall and 24/7 concierge service.",
   keywords: [
     "Hotel Itagi Square",
-    "Luxury Hotel",
-    "Suites",
-    "Indo-Arabic Restaurant",
-    "Fine Dining",
-    "Banquets",
-    "Hospitality",
+    "hotel in Vijayapura",
+    "hotel in Bijapur",
+    "restaurant in Vijayapura",
+    "restaurant in Bijapur",
+    "luxury hotel Vijayapura",
+    "rooms in Vijayapura",
+    "Al-Quds restaurant",
+    "Indo-Arabic restaurant Vijayapura",
+    "banquet hall Vijayapura",
   ],
+  authors: [{ name: "Hotel Itagi Square" }],
+  creator: "Hotel Itagi Square",
+  publisher: "Hotel Itagi Square",
+  category: "Travel and hospitality",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  other: {
+    "geo.region": "IN-KA",
+    "geo.placename": "Vijayapura",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -49,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${uncial.variable} ${luxuriousScript.variable} h-full antialiased scroll-smooth`}
     >

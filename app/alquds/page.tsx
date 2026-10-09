@@ -9,17 +9,102 @@ import { AlQudsLoader } from "@/components/alquds/alquds-loader";
 import { AlQudsGallery } from "@/components/alquds/alquds-gallery";
 import { AgencyCredit } from "@/components/sections/agency-credit";
 import { orderPlatforms } from "@/data/alquds";
+import { absoluteUrl, hotelAddress, siteUrl } from "@/lib/seo";
 import styles from "./page.module.css";
 
+const title = "Al-Quds Restaurant | Indo-Arabic Food in Vijayapura";
+const description =
+  "Visit Al-Quds at Hotel Itagi Square for Indo-Arabic food in Vijayapura (Bijapur), from fragrant rice to charcoal-grilled favourites made for sharing.";
+
 export const metadata: Metadata = {
-  title: "Al-Quds | Indo-Arabic Kitchen at Hotel Itagi Square",
-  description:
-    "Discover Al-Quds at Hotel Itagi Square, Vijayapura. Explore our Indo-Arabic cuisine and plan your visit.",
+  title,
+  description,
+  alternates: {
+    canonical: "/alquds",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/alquds",
+    siteName: "Hotel Itagi Square",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/alquds/feast.webp",
+        width: 1536,
+        height: 1024,
+        alt: "Indo-Arabic dishes served at Al-Quds in Hotel Itagi Square",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/alquds/feast.webp"],
+  },
+};
+
+const restaurantStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Restaurant",
+      "@id": `${siteUrl}/alquds#restaurant`,
+      name: "Al-Quds",
+      url: absoluteUrl("/alquds"),
+      description,
+      image: [
+        absoluteUrl("/images/alquds/feast.webp"),
+        absoluteUrl("/images/alquds/2.jpeg"),
+        absoluteUrl("/images/alquds/11.jpeg"),
+      ],
+      telephone: "+91 81977 88977",
+      servesCuisine: ["Indo-Arabic", "Indian", "Arabic"],
+      address: hotelAddress,
+      parentOrganization: {
+        "@type": "Hotel",
+        "@id": `${siteUrl}/#hotel`,
+        name: "Hotel Itagi Square",
+        url: siteUrl,
+      },
+      sameAs: orderPlatforms
+        .map((platform) => platform.url)
+        .filter((url): url is string => Boolean(url)),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Hotel Itagi Square",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Al-Quds Restaurant",
+          item: absoluteUrl("/alquds"),
+        },
+      ],
+    },
+  ],
 };
 
 export default function AlQudsPage() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(restaurantStructuredData).replace(
+            /</g,
+            "\\u003c",
+          ),
+        }}
+      />
       <AlQudsLoader />
       <a href="#main" className={styles.skip}>
         Skip to content

@@ -7,12 +7,21 @@ export interface PageHeroProps {
   image: string;
   imageAlt: string;
   className?: string;
+  imageClassName?: string;
   /** Optional CTAs rendered under the subtitle. */
   children?: React.ReactNode;
 }
 
 /** Inner-page hero: shorter than the home hero, title anchored bottom-left. */
-export function PageHero({ title, subtitle, image, imageAlt, className, children }: PageHeroProps) {
+export function PageHero({
+  title,
+  subtitle,
+  image,
+  imageAlt,
+  className,
+  imageClassName,
+  children,
+}: PageHeroProps) {
   return (
     <section
       aria-labelledby="page-hero-title"
@@ -25,7 +34,7 @@ export function PageHero({ title, subtitle, image, imageAlt, className, children
         preload
         quality={90}
         sizes="100vw"
-        className="object-cover object-center"
+        className={cn('object-cover object-center', imageClassName)}
       />
       <div aria-hidden="true" className="absolute inset-0 bg-linear-to-t from-black/65 via-black/30 to-black/10" />
 

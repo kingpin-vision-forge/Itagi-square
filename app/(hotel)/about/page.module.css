@@ -1,0 +1,235 @@
+.page {
+  background: #f4f0e8;
+  color: #1d161f;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 4rem 7rem;
+  width: min(100% - 3rem, 75rem);
+  margin-inline: auto;
+  padding-block: clamp(5.5rem, 10vw, 9rem);
+}
+
+.profileHeading h2,
+.placeCopy h2,
+.venturesIntro h2,
+.nextStep h2 {
+  margin: 0;
+  font-size: clamp(2.65rem, 5.4vw, 5rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.profileCopy {
+  max-width: 39rem;
+  padding-top: 0.35rem;
+}
+
+.profileCopy p,
+.placeCopy p,
+.venturesIntro p {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.5;
+}
+
+.profileCopy p + p {
+  margin-top: 1.5rem;
+  color: #655d61;
+}
+
+.credentials {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  border-top: 1px solid #cfc2ae;
+  border-bottom: 1px solid #cfc2ae;
+}
+
+.credentials div {
+  padding: 1.5rem 1.25rem 1.6rem 0;
+}
+
+.credentials div + div {
+  padding-left: 1.75rem;
+  border-left: 1px solid #cfc2ae;
+}
+
+.credentials dt {
+  margin-bottom: 0.55rem;
+  color: #71676c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.credentials dd {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.25;
+}
+
+.place {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(20rem, 0.65fr);
+  min-height: 43rem;
+  background: #e8e2d5;
+}
+
+.placeImage {
+  position: relative;
+  min-height: 36rem;
+  overflow: hidden;
+}
+
+.coverImage {
+  object-fit: cover;
+}
+
+.placeCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(3rem, 6vw, 6rem);
+}
+
+.placeCopy p {
+  max-width: 34rem;
+  margin-top: 2rem;
+  color: #5f555b;
+}
+
+.ventures {
+  display: grid;
+  grid-template-columns: minmax(17rem, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  padding: clamp(5.5rem, 10vw, 9rem) max(1.5rem, calc((100vw - 75rem) / 2));
+  background: #2b0736;
+  color: white;
+}
+
+.venturesIntro {
+  align-self: start;
+  position: sticky;
+  top: 7rem;
+}
+
+.venturesIntro p {
+  max-width: 30rem;
+  margin-top: 1.75rem;
+  color: #d8c7dc;
+}
+
+.ventureList article {
+  padding: 2rem 0 2.25rem;
+  border-top: 1px solid rgb(255 255 255 / 24%);
+}
+
+.ventureList article:last-child {
+  border-bottom: 1px solid rgb(255 255 255 / 24%);
+}
+
+.ventureList h3 {
+  margin: 0;
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.ventureList p {
+  max-width: 38rem;
+  margin: 0.8rem 0 0;
+  color: #d8c7dc;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.nextStep {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  width: min(100% - 3rem, 75rem);
+  margin-inline: auto;
+  padding-block: clamp(5.5rem, 9vw, 8rem);
+}
+
+.nextStep h2 {
+  max-width: 48rem;
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.actions a {
+  color: #481454;
+  font-size: 1.12rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.38em;
+  transition: color 180ms ease-out;
+}
+
+.actions a:hover {
+  color: #742985;
+}
+
+.actions a:focus-visible {
+  border-radius: 0.15rem;
+  outline: 2px solid #481454;
+  outline-offset: 0.35rem;
+}
+
+@media (max-width: 767px) {
+  .profile,
+  .ventures {
+    grid-template-columns: 1fr;
+  }
+
+  .profile {
+    gap: 2.5rem;
+  }
+
+  .credentials {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials div + div {
+    padding-left: 0;
+    border-top: 1px solid #cfc2ae;
+    border-left: 0;
+  }
+
+  .place {
+    grid-template-columns: 1fr;
+  }
+
+  .placeImage {
+    min-height: 25rem;
+  }
+
+  .ventures {
+    gap: 3.5rem;
+  }
+
+  .venturesIntro {
+    position: static;
+  }
+
+  .nextStep {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

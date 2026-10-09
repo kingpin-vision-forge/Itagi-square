@@ -17,8 +17,7 @@ export const navItems: NavItem[] = [
 
 export const moreItems: NavItem[] = [
   { label: 'About Itagi', href: '/about' },
-  { label: 'Meetings & Conferences', href: '/meetings' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'Banquet Hall', href: '/meetings' },
   { label: 'Order Online', href: '/alquds#order' },
 ];
 

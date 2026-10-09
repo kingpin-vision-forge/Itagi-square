@@ -38,12 +38,12 @@ export const experiencesSection = {
     {
       id: 'connect',
       title: 'CONNECT',
-      subtitle: 'Banquets & Meetings',
+      subtitle: 'Banquet Hall',
       image: '/images/experiences/connect.png',
-      alt: 'Meeting rooms and banqueting halls at Hotel Itagi Square',
+      alt: 'Banquet Hall at Hotel Itagi Square',
       href: '/meetings',
       description:
-        'Host distinguished corporate gatherings, private celebrations, and grand banquets with impeccable service.',
+        'Bring together more than 100 guests for meetings, conferences, weddings and private celebrations.',
     },
   ] as ExperiencePillar[],
 };

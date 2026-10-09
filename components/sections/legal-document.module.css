@@ -1,0 +1,235 @@
+.page {
+  background: #f4f0e8;
+  color: #1d161f;
+}
+
+.hero {
+  padding: clamp(9rem, 16vw, 13rem) 1.5rem clamp(4.5rem, 8vw, 7rem);
+  background: #2b0736;
+  color: #fff;
+}
+
+.heroInner {
+  width: min(100%, 75rem);
+  margin-inline: auto;
+}
+
+.hero h1 {
+  max-width: 60rem;
+  margin: 0;
+  font-size: clamp(3.35rem, 8vw, 6rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.summary {
+  max-width: 46rem;
+  margin: 2rem 0 0;
+  color: #eedbee;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  line-height: 1.5;
+}
+
+.updated {
+  margin: 2.25rem 0 0;
+  color: #d5c4db;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.32fr) minmax(0, 0.68fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  width: min(100% - 3rem, 75rem);
+  margin-inline: auto;
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+}
+
+.contents {
+  align-self: start;
+  position: sticky;
+  top: 7rem;
+  padding-top: 0.25rem;
+}
+
+.contents > p {
+  margin: 0 0 1.25rem;
+  color: #655d61;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contents ol {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #cfc2ae;
+  list-style: none;
+}
+
+.contents li {
+  border-bottom: 1px solid #cfc2ae;
+}
+
+.contents a {
+  display: block;
+  padding: 0.85rem 0;
+  color: #4e4650;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+
+.contents a:hover {
+  color: #742985;
+}
+
+.contents a:focus-visible,
+.section a:focus-visible {
+  border-radius: 0.15rem;
+  outline: 2px solid #481454;
+  outline-offset: 0.25rem;
+}
+
+.article {
+  min-width: 0;
+  max-width: 48rem;
+}
+
+.section {
+  scroll-margin-top: 7rem;
+  padding: 0 0 clamp(3.75rem, 7vw, 6rem);
+  overflow-wrap: anywhere;
+}
+
+.section + .section {
+  padding-top: clamp(3.75rem, 7vw, 6rem);
+  border-top: 1px solid #cfc2ae;
+}
+
+.section h2 {
+  margin: 0 0 1.6rem;
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.section p,
+.section li,
+.section th,
+.section td {
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.section p {
+  margin: 0;
+}
+
+.section p + p,
+.section p + ul,
+.section p + ol,
+.section ul + p,
+.section ol + p,
+.section div + p {
+  margin-top: 1.25rem;
+}
+
+.section ul,
+.section ol {
+  margin: 1.25rem 0 0;
+  padding-inline-start: 1.25rem;
+}
+
+.section li + li {
+  margin-top: 0.75rem;
+}
+
+.section a {
+  color: #481454;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.24em;
+}
+
+.section strong {
+  font-weight: 700;
+}
+
+.section table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+}
+
+.section th,
+.section td {
+  padding: 1rem 0;
+  border-bottom: 1px solid #cfc2ae;
+  text-align: start;
+  vertical-align: top;
+}
+
+.section th {
+  width: 28%;
+  padding-right: 1.5rem;
+  font-weight: 700;
+}
+
+.section td:nth-child(2),
+.section th:nth-child(2) {
+  width: 24%;
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contents {
+    position: static;
+  }
+
+  .article {
+    max-width: none;
+  }
+
+  .section table,
+  .section tbody,
+  .section tr,
+  .section th,
+  .section td {
+    display: block;
+    width: 100%;
+  }
+
+  .section tr {
+    padding-block: 1rem;
+    border-bottom: 1px solid #cfc2ae;
+  }
+
+  .section th,
+  .section td {
+    padding: 0;
+    border: 0;
+  }
+
+  .section td {
+    margin-top: 0.35rem;
+  }
+
+  .section td:nth-child(2),
+  .section th:nth-child(2) {
+    width: 100%;
+    padding-right: 0;
+  }
+}

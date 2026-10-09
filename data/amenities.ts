@@ -11,7 +11,7 @@ export const amenitiesData = {
         'Car parking',
         'Multi-lingual staff',
         'High-speed Wi-Fi',
-        'Executive meeting rooms',
+        'Banquet Hall for 100+ guests',
         'Doctor on call',
         'Business centre',
         'Flora terrace'
