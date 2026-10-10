@@ -36,10 +36,18 @@ export function BrandFooter() {
               <div className="space-y-1.5 text-xs sm:text-sm text-[#D5C4DB] font-sans">
                 <p>
                   <a
-                    href="tel:1-800-900-1200"
+                    href="tel:08352-270244"
                     className="hover:text-white transition-colors"
                   >
-                    1-800-900-1200
+                    08352-270244
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="tel:08352-270255"
+                    className="hover:text-white transition-colors"
+                  >
+                    08352 270255
                   </a>
                 </p>
                 <p>
@@ -47,7 +55,7 @@ export function BrandFooter() {
                     href="tel:+918197788977"
                     className="hover:text-white transition-colors"
                   >
-                    +91 81977 88977 / +91 123 456 7890
+                    +91 81977 88977
                   </a>
                 </p>
                 <p>
