@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X, Phone } from 'lucide-react';
+import { HotelLogo } from '@/components/ui/hotel-logo';
 import { cn } from '@/lib/utils';
 
 export interface NavItem {
@@ -149,11 +150,9 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
         <Link
           href="/"
           aria-label="Itagi Square home"
-          className="group justify-self-start rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700"
+          className="group w-[132px] justify-self-start rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700 md:w-[172px] lg:w-[190px]"
         >
-          <span className="text-[32px] font-normal leading-none tracking-[0.02em] transition-colors group-hover:text-purple-700 md:text-[42px]">
-            ITAGI
-          </span>
+          <HotelLogo alt="" priority sizes="(min-width: 1024px) 190px, (min-width: 768px) 172px, 132px" />
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -260,9 +259,14 @@ export function Navbar({ className, onBookNowClick }: NavbarProps) {
       >
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-[#CFC2AE]/60">
-            <span className="text-xl font-serif font-bold tracking-[0.2em] text-[#1D161F]">
-              HOTEL ITAGI
-            </span>
+            <Link
+              href="/"
+              aria-label="Itagi Square home"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-40 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700"
+            >
+              <HotelLogo alt="" sizes="160px" />
+            </Link>
             <button
               type="button"
               aria-label="Close menu"

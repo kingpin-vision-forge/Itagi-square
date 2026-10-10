@@ -63,7 +63,12 @@ export const metadata: Metadata = {
     "geo.placename": "Vijayapura",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: {
+      url: "/images/hotel-itagi-square-logo.png",
+      type: "image/png",
+    },
+    shortcut: "/images/hotel-itagi-square-logo.png",
+    apple: "/images/hotel-itagi-square-logo.png",
   },
 };
 

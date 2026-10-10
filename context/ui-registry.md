@@ -106,6 +106,24 @@ Composite indicator pairing a clean line icon with room metric data (area, bed, 
   }
   ```
 
+### 2.4 `HotelLogo`
+
+File: `components/ui/hotel-logo.tsx`
+Last updated: 2026-10-10
+
+| Property | Class |
+| --- | --- |
+| Background | transparent |
+| Border | none |
+| Border radius | none on the image; the parent link owns its focus shape |
+| Image treatment | `h-auto w-full object-contain` |
+| Spacing | none; placement context owns spacing |
+| Hover state | none; placement context owns interaction feedback |
+| Shadow | none |
+| Accent usage | supplied gold-and-green brand artwork |
+
+**Pattern notes:** Use `/images/hotel-itagi-square-logo.png` only through this component for site-wide hotel branding. Keep the intrinsic `4096 × 1150` ratio, provide a truthful `sizes` value, and use an empty `alt` when the parent link already has an accessible name. Do not recreate the hotel mark with styled text.
+
 ---
 
 ## 3. Molecular Components
@@ -190,7 +208,7 @@ Pill-shaped inline subscription component.
 ### 4.1 `Navbar`
 - **File Path**: `components/sections/navbar.tsx`
 - **Design Reference**: `Desktop - 1.png`
-- **Features**: Frosted glassmorphism (`backdrop-blur-md`), brand logo, links (`ROOMS & SUITES`, `DINING`, `MORE`), mobile hamburger toggle, powder blue `BOOK NOW` CTA.
+- **Features**: Frosted glassmorphism (`backdrop-blur-md`), official responsive `HotelLogo` artwork in the desktop bar and mobile drawer, links (`ROOMS & SUITES`, `DINING`, `MORE`), mobile hamburger toggle, powder blue `BOOK NOW` CTA.
 
 ### 4.2 `HeroSection`
 - **File Path**: `components/sections/hero-section.tsx`
