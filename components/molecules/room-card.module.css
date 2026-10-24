@@ -16,13 +16,7 @@
 }
 
 .image {
-  /* The supplied crops include a thin top margin and a title under the photo.
-     Trim the margin; the HTML face below covers the original title. */
-  top: -8px !important;
-  left: -1px !important;
-  width: calc(100% + 2px) !important;
-  height: calc(100% + 8px) !important;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .face {

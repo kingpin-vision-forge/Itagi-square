@@ -4,22 +4,21 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import styles from './about-intro-section.module.css';
 
-type Photo = {
-  src: string;
-  crop?: 'ceiling' | 'stairs' | 'room' | 'lounge' | 'dining';
-};
-
-const entrance: Photo = { src: '/images/hero/entrance-clean.png' };
-const ceiling: Photo = { src: '/images/about/reference-collage.png', crop: 'ceiling' };
-const stairs: Photo = { src: '/images/about/reference-collage.png', crop: 'stairs' };
-const dining: Photo = { src: '/images/experiences/dine.png', crop: 'dining' };
-const room: Photo = { src: '/images/rooms/executive-room.png', crop: 'room' };
-const lounge: Photo = { src: '/images/experiences/unwind.png', crop: 'lounge' };
+const exterior = '/images/home-image.jpeg';
+const reception = '/images/reception.jpg';
+const restaurant = '/images/dining-2.jpeg';
+const dastarkhwan = '/images/dastarkhwan.jpeg';
+const diningTable = '/images/dining-table.jpeg';
+const bedroom = '/images/rooms/room-2.jpeg';
+const bedside = '/images/room-4.jpeg';
+const desk = '/images/rooms/room-3.jpeg';
+const amenities = '/images/rooms/room-1.jpg';
+const teaset = '/images/teaset.jpg';
 
 // Extra photographs above and below the viewport keep both moving strips filled.
 const strips = [
-  [stairs, dining, entrance, ceiling, stairs, entrance, ceiling, stairs],
-  [room, lounge, dining, lounge, room, entrance, room, lounge],
+  [exterior, restaurant, reception, dastarkhwan, exterior, diningTable, reception, restaurant],
+  [bedroom, teaset, bedside, desk, amenities, bedroom, teaset, bedside],
 ];
 
 export function AboutPhotoStrips() {
@@ -101,17 +100,15 @@ export function AboutPhotoStrips() {
               className={styles.track}
               data-scroll-direction={index === 0 ? 'up' : 'down'}
             >
-              {photos.map((photo, photoIndex) => (
-                <div className={styles.tile} key={`${photo.src}-${photoIndex}`}>
+              {photos.map((src, photoIndex) => (
+                <div className={styles.tile} key={`${src}-${photoIndex}`}>
                   <Image
-                    src={photo.src}
+                    src={src}
                     alt=""
                     fill
-                    sizes={photo.crop === 'ceiling' || photo.crop === 'stairs'
-                      ? '100vw'
-                      : '(max-width: 639px) 35vw, 24vw'}
-                    quality={100}
-                    className={`${styles.photo} ${photo.crop ? styles[photo.crop] : ''}`}
+                    sizes="(max-width: 639px) 35vw, 24vw"
+                    quality={90}
+                    className={styles.photo}
                   />
                 </div>
               ))}

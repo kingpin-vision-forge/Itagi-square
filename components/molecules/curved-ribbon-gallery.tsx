@@ -51,20 +51,20 @@ const fragmentSource = `
     float horizontal = fract(position);
     if (horizontal < 0.025 || horizontal > 0.975) discard;
 
-    // Sample only photographs from the supplied reference, excluding its UI.
+    // Sample the three real Al-Quds photographs in the prepared source strip.
     vec4 crop;
-    if (panel < 1.0) crop = vec4(962.0, 355.0, 377.0, 274.0);
-    else if (panel < 2.0) crop = vec4(162.0, 355.0, 377.0, 274.0);
-    else crop = vec4(562.0, 356.0, 377.0, 272.0);
+    if (panel < 1.0) crop = vec4(0.0, 0.0, 512.0, 768.0);
+    else if (panel < 2.0) crop = vec4(512.0, 0.0, 512.0, 768.0);
+    else crop = vec4(1024.0, 0.0, 512.0, 768.0);
     vec2 photo = vec2((horizontal - 0.025) / 0.95, (y - top) / (bottom - top));
-    vec2 uv = (crop.xy + photo * crop.zw) / vec2(1440.0, 866.0);
+    vec2 uv = (crop.xy + photo * crop.zw) / vec2(1536.0, 768.0);
     gl_FragColor = texture2D(uImage, uv);
   }
 `;
 
 export function CurvedRibbonGallery({
-  imageSrc = '/images/dining/ribbon-full.png',
-  alt = 'Indo-Arabic dishes including herb-marinated skewers and cashew stir-fry',
+  imageSrc = '/images/dining/alquds-restaurant-ribbon.webp',
+  alt = 'Al-Quds dining hall, chicken biryani and traditional floor seating',
   className,
 }: CurvedRibbonGalleryProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -230,13 +230,13 @@ export function CurvedRibbonGallery({
   return (
     <div className={cn(styles.gallery, className)}>
       <div className={styles.stage} role="img" aria-label={alt}>
-        <svg className={styles.fallback} viewBox="0 230 1440 554" preserveAspectRatio="none" aria-hidden="true">
+        <svg className={styles.fallback} viewBox="0 0 1536 768" preserveAspectRatio="none" aria-hidden="true">
           <defs>
             <clipPath id="dining-photo-fallback">
-              <path d="M0 258 C190 385 1250 385 1440 258 L1440 744 C1250 590 190 590 0 718 Z" />
+              <path d="M0 0 C180 170 1356 170 1536 0 L1536 768 C1356 590 180 590 0 768 Z" />
             </clipPath>
           </defs>
-          <image href={imageSrc} width="1440" height="866" clipPath="url(#dining-photo-fallback)" />
+          <image href={imageSrc} width="1536" height="768" clipPath="url(#dining-photo-fallback)" />
         </svg>
         <canvas ref={canvasRef} className={styles.canvas} aria-hidden="true" />
         <svg className={styles.outlines} viewBox="0 0 1440 554" preserveAspectRatio="none" aria-hidden="true">

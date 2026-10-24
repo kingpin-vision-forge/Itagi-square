@@ -4,7 +4,7 @@ export const diningData: DiningSectionData = {
   title: 'GOOD FOOD. GOOD MOMENTS.',
   subtitle:
     'Thoughtfully crafted flavours, inviting spaces, and moments made to be savoured.',
-  ribbonImage: '/images/dining/ribbon-full.png',
+  ribbonImage: '/images/dining/alquds-restaurant-ribbon.webp',
   ctaLabel: 'EXPLORE Al-QUDS',
   ctaHref: '/alquds',
   items: [
@@ -14,7 +14,7 @@ export const diningData: DiningSectionData = {
       cuisine: 'Tandoor & Charcoal',
       description:
         'Char-grilled tender cuts infused with fresh mint, coriander, and royal Mughal spices.',
-      image: '/images/dining/ribbon-full.png',
+      image: '/images/dastarkhwan.jpeg',
       tag: 'Chef Signature',
     },
     {
@@ -23,7 +23,7 @@ export const diningData: DiningSectionData = {
       cuisine: 'Indo-Arabic Fusion',
       description:
         'Crisp wok-tossed peppers and protein enveloped in a rich sweet-savory aromatic glaze.',
-      image: '/images/dining/ribbon-full.png',
+      image: '/images/dining-table.jpeg',
       tag: 'House Special',
     },
     {
@@ -32,7 +32,7 @@ export const diningData: DiningSectionData = {
       cuisine: 'Awadhi & Arabic',
       description:
         'Fragrant long-grain basmati rice slow-cooked in sealed clay vessels with saffron and aged ghee.',
-      image: '/images/experiences/dine.png',
+      image: '/images/dining-2.jpeg',
       tag: 'Bestseller',
     },
   ],

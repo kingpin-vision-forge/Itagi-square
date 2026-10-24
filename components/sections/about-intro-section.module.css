@@ -109,37 +109,6 @@
   object-fit: cover;
 }
 
-/* Sample only the two complete photographs from the supplied collage artwork. */
-.photo.ceiling,
-.photo.stairs {
-  width: 533.8% !important;
-  height: auto !important;
-  max-width: none;
-  aspect-ratio: 1;
-  transform-origin: top left;
-  object-fit: fill;
-}
-
-.photo.ceiling {
-  transform: rotate(-34.5deg) translate(-75.33%, -43.14%);
-}
-
-.photo.stairs {
-  transform: rotate(-34.5deg) translate(-60.69%, -64.91%);
-}
-
-.photo.room {
-  /* The source includes a room label underneath the photograph. */
-  height: 135% !important;
-  object-position: center top;
-}
-
-.photo.lounge,
-.photo.dining {
-  height: 160% !important;
-  object-position: center top;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .track {
     transform: none !important;

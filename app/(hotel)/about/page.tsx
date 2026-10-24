@@ -16,10 +16,8 @@ export default function AboutPage() {
       <PageHero
         title="Rustumali A. Itagi"
         subtitle="Project management consultant, entrepreneur and the name behind a diverse group of businesses in Vijayapura."
-        image="/images/hero/hotel-exterior.png"
-        imageAlt="Hotel Itagi Square entrance framed by palms at dusk"
-        className="md:bg-[#6d7583]"
-        imageClassName="md:object-contain"
+        image="/images/home-image.jpeg"
+        imageAlt="Hotel Itagi Square building lit up at night"
       />
 
       <section className={styles.profile} aria-labelledby="profile-title">
@@ -56,8 +54,8 @@ export default function AboutPage() {
       <section className={styles.place} aria-labelledby="place-title">
         <div className={styles.placeImage}>
           <Image
-            src="/images/hero/entrance-clean.png"
-            alt="The warmly lit entrance of Hotel Itagi Square"
+            src="/images/reception.jpg"
+            alt="The reception desk at Hotel Itagi Square"
             fill
             sizes="(max-width: 767px) 100vw, 56vw"
             className={styles.coverImage}

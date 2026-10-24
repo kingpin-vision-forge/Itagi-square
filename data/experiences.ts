@@ -9,7 +9,7 @@ export const experiencesSection = {
       id: 'unwind',
       title: 'UNWIND',
       subtitle: 'Tranquil Living',
-      image: '/images/experiences/unwind.png',
+      image: '/images/teaset.jpg',
       alt: 'Unwind in serene luxury suites at Hotel Itagi Square',
       href: '/#rooms',
       description:
@@ -19,7 +19,7 @@ export const experiencesSection = {
       id: 'dine',
       title: 'DINE',
       subtitle: 'Indo-Arabic Flavours',
-      image: '/images/experiences/dine.png',
+      image: '/images/dining-2.jpeg',
       alt: 'Gourmet dining and authentic cuisine at Hotel Itagi Square',
       href: '/alquds',
       description:
@@ -30,6 +30,7 @@ export const experiencesSection = {
       title: 'EXPLORE',
       subtitle: 'Heritage & Grandeur',
       image: '/images/experiences/explore.png',
+      bakedLabel: true,
       alt: 'Architectural grandeur and local attractions at Hotel Itagi Square',
       href: '/about',
       description:
@@ -40,6 +41,7 @@ export const experiencesSection = {
       title: 'CONNECT',
       subtitle: 'Banquet Hall',
       image: '/images/experiences/connect.png',
+      bakedLabel: true,
       alt: 'Banquet Hall at Hotel Itagi Square',
       href: '/meetings',
       description:

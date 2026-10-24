@@ -77,6 +77,7 @@ function GalleryRow({
                   width={photo.landscape ? 1280 : 853}
                   height={photo.landscape ? 853 : 1280}
                   sizes={photo.landscape ? "520px" : "240px"}
+                  quality={90}
                 />
               </li>
             )),

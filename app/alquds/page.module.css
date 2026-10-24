@@ -14,7 +14,7 @@
   --emerald-deep: #072217;
   background: var(--ivory);
   color: var(--walnut);
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: "Hotel Numerals", var(--font-cormorant), Georgia, serif;
   font-size: 21px;
 }
 .page * {

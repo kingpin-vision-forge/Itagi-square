@@ -16,8 +16,8 @@ export default function MeetingsPage() {
       <PageHero
         title="Banquet Hall"
         subtitle="A flexible venue for meetings, conferences and celebrations, with space for more than 100 guests."
-        image="/images/hero/entrance-clean.png"
-        imageAlt="The warmly lit entrance of Hotel Itagi Square"
+        image="/images/home-image.jpeg"
+        imageAlt="Hotel Itagi Square building lit up at night"
       />
 
       <section className={styles.capacity} aria-labelledby="capacity-title">

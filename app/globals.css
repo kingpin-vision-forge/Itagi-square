@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* Use the guest's requested Times New Roman specifically for numeric glyphs.
+   The unicode range lets surrounding copy retain the hotel's display face. */
+@font-face {
+  font-family: "Hotel Numerals";
+  src:
+    local("Times New Roman"),
+    local("TimesNewRomanPSMT"),
+    local("Liberation Serif");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300 700;
+  unicode-range: U+0030-0039;
+}
+
 @theme {
   --color-purple-950: #1A0322;
   --color-purple-900: #2B0736;
@@ -28,8 +42,8 @@
   --color-gold-accent: #C79D58;
 
   /* Typography */
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-sans: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Hotel Numerals", var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Hotel Numerals", var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-uncial: var(--font-uncial), "Uncial Antiqua", serif;
   --font-luxurious: var(--font-luxurious), "Luxurious Script", cursive;
   --font-material-rounded: "Material Symbols Rounded", sans-serif;
@@ -48,6 +62,10 @@
 }
 
 @layer base {
+  html {
+    font-variant-numeric: lining-nums;
+  }
+
   * {
     border-color: var(--color-sand-400);
   }

@@ -121,6 +121,7 @@ export default function AlQudsPage() {
             alt="Illustrative Indo-Arabic spread with biryani, charcoal-grilled skewers and fresh herbs"
             fill
             preload
+            quality={90}
             sizes="100vw"
             className={styles.heroImage}
             data-scroll-hero-media
@@ -169,6 +170,7 @@ export default function AlQudsPage() {
               src="/images/alquds/2.jpeg"
               alt="Carved Arabic arch doorway with twisted gold columns beneath a crystal chandelier at Al-Quds"
               fill
+              quality={90}
               sizes="(max-width: 767px) 85vw, 42vw"
               data-scroll-parallax
             />
@@ -204,6 +206,7 @@ export default function AlQudsPage() {
               src="/images/alquds/11.jpeg"
               alt="Overhead view of a shared table with starters, noodles, soup, dessert and a pomegranate cooler"
               fill
+              quality={90}
               sizes="(max-width: 767px) 100vw, 48vw"
               data-scroll-media
             />
@@ -251,6 +254,7 @@ export default function AlQudsPage() {
               src="/images/alquds/6.jpeg"
               alt="The Al-Quds dining hall under a glowing gold star ceiling and crystal chandelier"
               fill
+              quality={90}
               sizes="(max-width: 767px) 100vw, 50vw"
               data-scroll-media
             />
@@ -342,6 +346,7 @@ export default function AlQudsPage() {
               src="/images/alquds/4.jpeg"
               alt="The Al-Quds entrance at Hotel Itagi Square, with its lit sign above the steps"
               fill
+              quality={90}
               sizes="(max-width: 767px) 100vw, 44vw"
               data-scroll-media
             />

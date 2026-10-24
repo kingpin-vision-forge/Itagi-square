@@ -22,13 +22,16 @@ export function PillarCard({ pillar, className, onClick }: PillarCardProps) {
       )}
       onClick={() => onClick && onClick(pillar)}
     >
-      {/* Crop the reference image above its baked-in label and button. */}
+      {/* Mockup images get cropped above their baked-in label and button. */}
       <Image
         src={pillar.image}
         alt={pillar.alt || pillar.title}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 60vw"
-        className="!h-[160%] object-cover object-top transition-transform duration-500 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-105"
+        className={cn(
+          'object-cover transition-transform duration-500 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-105',
+          pillar.bakedLabel && '!h-[160%] object-top'
+        )}
       />
 
       {/* Ambient Gradient Overlays for High Legibility */}

@@ -11,10 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
       images: [
-        absoluteUrl('/images/hero/entrance.png'),
-        absoluteUrl('/images/rooms/suite-room.png'),
-        absoluteUrl('/images/rooms/executive-suite.png'),
-        absoluteUrl('/images/rooms/executive-room.png'),
+        absoluteUrl('/images/home-image.jpeg'),
+        absoluteUrl('/images/rooms/room-2.jpeg'),
+        absoluteUrl('/images/room-4.jpeg'),
+        absoluteUrl('/images/rooms/room-3.jpeg'),
       ],
     },
     {

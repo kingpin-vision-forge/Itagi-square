@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/hero/entrance.png',
-        width: 1440,
-        height: 1024,
-        alt: 'Hotel Itagi Square entrance in Vijayapura',
+        url: '/images/home-image.jpeg',
+        width: 1600,
+        height: 1200,
+        alt: 'Hotel Itagi Square building lit up at night in Vijayapura',
       },
     ],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
-    images: ['/images/hero/entrance.png'],
+    images: ['/images/home-image.jpeg'],
   },
 };
 
@@ -61,16 +61,16 @@ const hotelStructuredData = {
       url: siteUrl,
       description,
       image: [
-        absoluteUrl('/images/hero/entrance.png'),
-        absoluteUrl('/images/rooms/suite-room.png'),
-        absoluteUrl('/images/rooms/executive-room.png'),
+        absoluteUrl('/images/home-image.jpeg'),
+        absoluteUrl('/images/rooms/room-2.jpeg'),
+        absoluteUrl('/images/rooms/room-3.jpeg'),
       ],
       telephone: '+91 81977 88977',
       email: 'hotelitagisquare01@gmail.com',
       address: hotelAddress,
       hasMap:
         'https://www.google.com/maps/search/?api=1&query=Hotel+Itagi+Square+Vijayapura',
-      checkinTime: '14:00',
+      checkinTime: '10:00',
       checkoutTime: '12:00',
       amenityFeature: [
         { '@type': 'LocationFeatureSpecification', name: 'High-speed Wi-Fi', value: true },

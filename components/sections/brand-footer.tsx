@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { NewsletterForm } from '@/components/molecules/newsletter-form';
 import { AgencyCredit } from '@/components/sections/agency-credit';
+import { HotelLogo } from '@/components/ui/hotel-logo';
 
 export function BrandFooter() {
   return (
@@ -15,19 +16,15 @@ export function BrandFooter() {
         {/* TOP SECTION: 2-COLUMN EDITORIAL LAYOUT (Frame 42.png)                     */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 mb-16">
-          {/* Column 1 (Left): Logo, Socials, Booking Contact, Customer Support */}
+          {/* Column 1 (Left): Logo, Booking Contact, Customer Support */}
           <div className="flex flex-col space-y-8 md:space-y-10">
-            <div>
-              <Link
-                href="/"
-                className="text-3xl sm:text-4xl font-serif tracking-[0.08em] uppercase font-normal text-white hover:text-[#EADBEE] transition-colors"
-              >
-                ITAGI
-              </Link>
-              <p className="text-base text-[#D5C4DB] font-serif mt-1">
-                Socials
-              </p>
-            </div>
+            <Link
+              href="/"
+              aria-label="Hotel Itagi Square home"
+              className="block w-[200px] sm:w-[240px] transition-opacity hover:opacity-85"
+            >
+              <HotelLogo alt="" sizes="(min-width: 640px) 240px, 200px" />
+            </Link>
 
             <div>
               <h4 className="text-xs sm:text-sm font-serif uppercase tracking-[0.14em] text-[#EEDBEE] mb-3">

@@ -8,7 +8,7 @@ export const beforeYouArriveData = {
       id: 'policy-rundown',
       title: 'POLICY RUNDOWN',
       items: [
-        { label: 'Check-in', value: '2:00 PM' },
+        { label: 'Check-in', value: '10:00 AM' },
         { label: 'Check-out', value: '12:00 PM' },
         { label: 'Check-in essentials', value: 'Photo ID and Credit Card' },
         {
