@@ -83,6 +83,9 @@ export function HeroSection({ className }: HeroSectionProps) {
           <span className="block whitespace-nowrap text-[clamp(40px,7.222vw,104px)]">
             ITAGI SQUARE
           </span>
+          <span className="mt-4 block font-sans text-[clamp(11px,1.1vw,15px)] uppercase tracking-[0.28em] text-white/85">
+            Vijayapura (Bijapur), Karnataka
+          </span>
         </h1>
       </div>
     </section>

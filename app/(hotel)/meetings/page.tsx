@@ -75,7 +75,7 @@ export default function MeetingsPage() {
         </div>
         <div className={styles.actions}>
           <Link href="/#contact">Enquire about the hall</Link>
-          <a href="tel:+918197788977">Call +91 81977 88977</a>
+          <a href="tel:+918352270244">Call 08352 270244</a>
         </div>
       </section>
     </main>

@@ -9,10 +9,16 @@ import { AlQudsLoader } from "@/components/alquds/alquds-loader";
 import { AlQudsGallery } from "@/components/alquds/alquds-gallery";
 import { AgencyCredit } from "@/components/sections/agency-credit";
 import { orderPlatforms } from "@/data/alquds";
-import { absoluteUrl, hotelAddress, siteUrl } from "@/lib/seo";
+import {
+  absoluteUrl,
+  hotelAddress,
+  hotelGeo,
+  hotelMapUrl,
+  siteUrl,
+} from "@/lib/seo";
 import styles from "./page.module.css";
 
-const title = "Al-Quds Restaurant | Indo-Arabic Food in Vijayapura";
+const title = "Al-Quds Restaurant in Vijayapura (Bijapur) | Indo-Arabic Food";
 const description =
   "Visit Al-Quds at Hotel Itagi Square for Indo-Arabic food in Vijayapura (Bijapur), from fragrant rice to charcoal-grilled favourites made for sharing.";
 
@@ -63,6 +69,9 @@ const restaurantStructuredData = {
       telephone: "+91 81977 88977",
       servesCuisine: ["Indo-Arabic", "Indian", "Arabic"],
       address: hotelAddress,
+      geo: hotelGeo,
+      hasMap: hotelMapUrl,
+      areaServed: ["Vijayapura", "Bijapur"],
       parentOrganization: {
         "@type": "Hotel",
         "@id": `${siteUrl}/#hotel`,
@@ -133,7 +142,10 @@ export default function AlQudsPage() {
               <br />
               Even better company.
             </h1>
-            <p>Indo-Arabic flavours, shared at Hotel Itagi Square.</p>
+            <p>
+              Indo-Arabic flavours, shared at Hotel Itagi Square in Vijayapura
+              (Bijapur).
+            </p>
             <a href="#cuisine" className={styles.lightButton}>
               Explore the cuisine <ArrowUpRight size={18} aria-hidden="true" />
             </a>
@@ -298,10 +310,10 @@ export default function AlQudsPage() {
                     <br />
                     near Itagi petrol pump,
                     <br />
-                    Vijayapura, Karnataka 586108
+                    Vijayapura (Bijapur), Karnataka 586108
                   </p>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Hotel+Itagi+Square+Vijayapura"
+                    href={hotelMapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.textLink}

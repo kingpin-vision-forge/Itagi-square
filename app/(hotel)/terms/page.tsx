@@ -164,7 +164,7 @@ const sections: LegalSection[] = [
         <p>
           Questions may be sent to{' '}
           <a href="mailto:hotelitagisquare01@gmail.com">hotelitagisquare01@gmail.com</a> or raised by
-          calling <a href="tel:+918197788977">+91 81977 88977</a>.
+          calling <a href="tel:+918352270244">08352 270244</a> or <a href="tel:+918197788977">+91 81977 88977</a>.
         </p>
       </>
     ),

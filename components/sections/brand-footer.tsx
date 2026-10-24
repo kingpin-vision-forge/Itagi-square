@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { NewsletterForm } from '@/components/molecules/newsletter-form';
 import { AgencyCredit } from '@/components/sections/agency-credit';
 import { HotelLogo } from '@/components/ui/hotel-logo';
+import { hotelMapUrl } from '@/lib/seo';
 
 export function BrandFooter() {
   return (
@@ -28,23 +29,34 @@ export function BrandFooter() {
 
             <div>
               <h4 className="text-xs sm:text-sm font-serif uppercase tracking-[0.14em] text-[#EEDBEE] mb-3">
+                FIND US
+              </h4>
+              <address className="not-italic text-xs sm:text-sm text-[#D5C4DB] font-sans leading-relaxed">
+                Itagi Garden, Athani Road, near Itagi Petrol Pump,
+                <br />
+                Vijayapura (Bijapur), Karnataka 586108
+              </address>
+              <a
+                href={hotelMapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 text-xs sm:text-sm text-[#D5C4DB] underline underline-offset-4 hover:text-white transition-colors"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+
+            <div>
+              <h4 className="text-xs sm:text-sm font-serif uppercase tracking-[0.14em] text-[#EEDBEE] mb-3">
                 FOR BOOKING CONTACT
               </h4>
               <div className="space-y-1.5 text-xs sm:text-sm text-[#D5C4DB] font-sans">
                 <p>
                   <a
-                    href="tel:08352-270244"
+                    href="tel:08352270244"
                     className="hover:text-white transition-colors"
                   >
-                    08352-270244
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="tel:08352-270255"
-                    className="hover:text-white transition-colors"
-                  >
-                    08352 270255
+                    08352 270244
                   </a>
                 </p>
                 <p>
@@ -53,6 +65,14 @@ export function BrandFooter() {
                     className="hover:text-white transition-colors"
                   >
                     +91 81977 88977
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="tel:08352270255"
+                    className="hover:text-white transition-colors"
+                  >
+                    08352 270255
                   </a>
                 </p>
                 <p>

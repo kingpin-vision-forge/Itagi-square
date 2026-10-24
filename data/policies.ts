@@ -32,7 +32,7 @@ export const beforeYouArriveData = {
           value:
             'Itagi garden, Athani Rd, near Itagi petrol pump, Vijayapura 586108, Karnataka, India',
         },
-        { label: 'Phone', value: '+91 81977 88977' },
+        { label: 'Phone', value: '08352 270244 / +91 81977 88977' },
         { label: 'Reservations', value: 'hotelitagisquare01@gmail.com' },
       ],
     },

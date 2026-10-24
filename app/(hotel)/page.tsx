@@ -8,9 +8,9 @@ import { CulinaryShowcaseSection } from '@/components/sections/culinary-showcase
 import { GuestGuideSection } from '@/components/sections/guest-guide-section';
 import { ContactPostcardSection } from '@/components/sections/contact-postcard-section';
 import { BrandIntro } from '@/components/sections/brand-intro';
-import { absoluteUrl, hotelAddress, siteUrl } from '@/lib/seo';
+import { absoluteUrl, hotelAddress, hotelGeo, hotelMapUrl, siteUrl } from '@/lib/seo';
 
-const title = 'Hotel in Vijayapura | Hotel Itagi Square';
+const title = 'Hotel in Vijayapura (Bijapur) | Hotel Itagi Square';
 const description =
   'Book Hotel Itagi Square in Vijayapura (Bijapur) for modern rooms and suites, Al-Quds Indo-Arabic dining, banquet facilities and 24/7 concierge service.';
 
@@ -65,11 +65,17 @@ const hotelStructuredData = {
         absoluteUrl('/images/rooms/room-2.jpeg'),
         absoluteUrl('/images/rooms/room-3.jpeg'),
       ],
-      telephone: '+91 81977 88977',
+      telephone: '+91 8352 270244',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'reservations',
+        telephone: '+91 81977 88977',
+      },
       email: 'hotelitagisquare01@gmail.com',
       address: hotelAddress,
-      hasMap:
-        'https://www.google.com/maps/search/?api=1&query=Hotel+Itagi+Square+Vijayapura',
+      geo: hotelGeo,
+      hasMap: hotelMapUrl,
+      areaServed: ['Vijayapura', 'Bijapur'],
       checkinTime: '10:00',
       checkoutTime: '12:00',
       amenityFeature: [

@@ -16,6 +16,15 @@ export const hotelAddress = {
   addressCountry: "IN",
 } as const;
 
+// Pin from the hotel's Google Business Profile.
+export const hotelGeo = {
+  "@type": "GeoCoordinates",
+  latitude: 16.8290514,
+  longitude: 75.686058,
+} as const;
+
+export const hotelMapUrl = "https://www.google.com/maps?cid=370817116227217672";
+
 export function absoluteUrl(path: string) {
   return new URL(path, `${siteUrl}/`).toString();
 }

@@ -177,7 +177,7 @@ const sections: LegalSection[] = [
         <p>
           For privacy questions or grievances, email{' '}
           <a href="mailto:hotelitagisquare01@gmail.com">hotelitagisquare01@gmail.com</a>, call{' '}
-          <a href="tel:+918197788977">+91 81977 88977</a>, or write to Hotel Itagi Square, Itagi
+          <a href="tel:+918352270244">08352 270244</a> or <a href="tel:+918197788977">+91 81977 88977</a>, or write to Hotel Itagi Square, Itagi
           Garden, Athani Road, Vijayapura 586108, Karnataka, India.
         </p>
       </>
